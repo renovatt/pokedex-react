@@ -1,9 +1,12 @@
 import './App.css';
+import { Header } from './components/Header';
+import { Pokedex } from './components/Pokedex'
 
 function App() {
   return (
     <div className="App">
-      <h1>Olá</h1>
+      <Header/>
+      <Pokedex />
     </div>
   );
 }

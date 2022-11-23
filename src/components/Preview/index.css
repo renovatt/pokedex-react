@@ -1,0 +1,30 @@
+.preview{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #333;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    height: 20rem;
+    border-radius: .4rem;
+}
+
+.unique-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50rem;
+    height: 19rem;
+    border-radius: .4rem;
+    background: #a5a09d;
+}
+
+.unique-card h1{
+    color: #000;
+    text-transform: capitalize;
+}
+
+.unique-card img{
+    width: 400px;
+    margin-bottom: 5rem;
+}
