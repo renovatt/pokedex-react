@@ -5,7 +5,7 @@ import './index.css'
 export const Header = () => {
     const [pokemon, setPokemon] = React.useState('6')
     const [pokemonPreview, setPokemonPreview] = React.useState('')
-    const { id, name, sprites } = pokemonPreview
+    const { id, name, types, sprites } = pokemonPreview
 
     const searchPokemon = async (pokemon) => {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
@@ -37,7 +37,7 @@ export const Header = () => {
                     </form>
                 </nav>
             </header>
-            <Preview id={id} name={name} sprites={sprites}/>
+            <Preview id={id} name={name} types={types} sprites={sprites}/>
         </>
     )
 }

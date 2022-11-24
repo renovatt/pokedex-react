@@ -24,6 +24,13 @@
     text-transform: capitalize;
 }
 
+.unique-card p{
+    color: #fff;
+    margin: .4rem;
+    padding: .2rem 1.5rem;
+    border-radius: .4rem;
+}
+
 .unique-card img{
     width: 400px;
     margin-bottom: 5rem;

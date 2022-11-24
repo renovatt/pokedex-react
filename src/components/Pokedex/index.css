@@ -10,7 +10,7 @@
     height: 22rem;
     width: 38rem;
     border-radius: .4rem;
-    background: #5c6666;
+    background: #cba86c;
     margin: .2rem;
     margin-top: 2rem;
 }
@@ -45,6 +45,8 @@
 
 .types {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .body {
@@ -52,8 +54,9 @@
 }
 
 .types p {
+    color: #fff;
     margin: .4rem;
-    padding: .2rem;
+    padding: .2rem 1.5rem;
     border-radius: .4rem;
 }
 
@@ -61,7 +64,7 @@
     margin: .4rem;
     padding: .2rem;
     border-radius: .4rem;
-    background: #808a46;
+    background: #eee;
 }
 
 img {
@@ -71,74 +74,128 @@ img {
 
 .bug {
     background: #7bcf00;
+    background-image: url(../../assets/iconTypes/bug.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .dark {
     background: #5a566a;
+    background-image: url(../../assets/iconTypes/dark.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .dragon {
     background: #0076ff;
+    background-image: url(../../assets/iconTypes/dragon.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .electric {
     background: #ffde00;
+    background-image: url(../../assets/iconTypes/electric.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .fairy {
     background: #ff76ff;
+    background-image: url(../../assets/iconTypes/fairy.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .fighting {
     background: #ff215b;
+    background-image: url(../../assets/iconTypes/fighting.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .fire {
     background: #ff9900;
+    background-image: url(../../assets/iconTypes/fire.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .flying {
     background: #89bdff;
+    background-image: url(../../assets/iconTypes/flying.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .ghost {
     background: #4e6aff;
+    background-image: url(../../assets/iconTypes/ghost.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .grass {
     background: #1cd80e;
+    background-image: url(../../assets/iconTypes/grass.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .ground {
     background: #ff6b0d;
+    background-image: url(../../assets/iconTypes/ground.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .ice {
     background: #2ee4c6;
+    background-image: url(../../assets/iconTypes/ice.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .normal {
     background: #9fa39d;
+    background-image: url(../../assets/iconTypes/normal.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .poison {
     background: #f149ff;
+    background-image: url(../../assets/iconTypes/poison.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .psychic {
     background: #ff6c64;
+    background-image: url(../../assets/iconTypes/psychic.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .rock {
     background: #d8bc5a;
+    background-image: url(../../assets/iconTypes/rock.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .steel {
     background: #23a1bd;
+    background-image: url(../../assets/iconTypes/steel.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 .water {
     background: #14a8ff;
+    background-image: url(../../assets/iconTypes/water.svg);
+    background-repeat: no-repeat;
+    background-position: 5px;
 }
 
 
