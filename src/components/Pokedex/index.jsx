@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.css'
 
-export const Pokedex = ({ id, name, sprites }) => {
+export const Pokedex = () => {
 
     const [pokeList, setPokeList] = React.useState([])
 
@@ -16,7 +16,6 @@ export const Pokedex = ({ id, name, sprites }) => {
             setPokeList(result.map(info => ({
                 id: info.id,
                 name: info.name,
-                // types: info.types.map(({ type } = {}) => type.name),
                 types: info.types.map(({ type }) => type.name),
                 image: info.sprites.other.home.front_default,
                 stat_name: info.stats.map(stat => stat.stat.name),
@@ -42,7 +41,7 @@ export const Pokedex = ({ id, name, sprites }) => {
 
                             <div className="types">
                                 {pokemon.types.map((name, index) =>
-                                    (<p key={index}>{name}</p>))}
+                                    (<p className={name} key={index}>{name}</p>))}
                             </div>
 
                             <div className='body'>
