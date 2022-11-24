@@ -1,5 +1,7 @@
 import React from 'react'
 import './index.css'
+import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
+import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
 
 export const Pokedex = () => {
 
@@ -18,8 +20,7 @@ export const Pokedex = () => {
                 name: info.name,
                 types: info.types.map(({ type }) => type.name),
                 image: info.sprites.other.home.front_default,
-                stat_name: info.stats.map(stat => stat.stat.name),
-                stats: info.stats.map(stat => stat.base_stat),
+                stats: info.stats.map(stat => ({ stat: stat.base_stat, name: stat.stat.name })),
                 weight: info.weight,
                 height: info.height
             })))
@@ -45,20 +46,24 @@ export const Pokedex = () => {
                             </div>
 
                             <div className='body'>
-                                <p>Altura: {pokemon.height / 10}m</p>
-                                <p>Peso: {pokemon.weight / 10}kg</p>
+
+                                <p> <WeightIcon/> Altura: {pokemon.height / 10}m</p>
+                                <p> <RulerIcon/> Peso: {pokemon.weight / 10}kg</p>
                             </div>
                         </div>
 
                         <div className='stats'>
-                            <div className='stats-name'>
-                                {pokemon.stat_name.map((name, index) =>
-                                    (<p key={index}>{name}</p>))}
-                            </div>
-                            <div className='stats-value'>
-                                {pokemon.stats.map((value, index) =>
-                                    (<p key={index}>{value}</p>))}
-                            </div>
+                            {pokemon.stats.map((stat) => {
+                                return (
+                                    <div className='stat'>
+                                        <p>{stat.name}</p>
+                                        <div className='bar-value'>
+                                            <div className='bar' style={{ "width": stat.stat + "%" }}></div>
+                                        </div>
+                                        <div className='stat-value'>{stat.stat}</div>
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
                 ))}

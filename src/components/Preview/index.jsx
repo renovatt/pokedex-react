@@ -15,7 +15,7 @@ export const Preview = ({ id, name, types, sprites }) => {
                             <p>#0{id}</p>
                             <h1>{name}</h1>
                             {types.map(({ type }) => (
-                                <p className={type.name}>{type.name}</p>
+                                <p key={type.name} className={type.name}>{type.name}</p>
                             ))}
                         </div>
                         <div>
