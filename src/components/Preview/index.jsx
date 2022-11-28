@@ -18,6 +18,7 @@ export const Preview = ({ id, name, types, sprites }) => {
                                 <p key={type.name} className={type.name}>{type.name}</p>
                             ))}
                         </div>
+
                         <div>
                             <img src={sprites.other.home.front_default} alt={name} />
                         </div>

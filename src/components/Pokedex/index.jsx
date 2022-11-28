@@ -2,10 +2,19 @@ import React from 'react'
 import './index.css'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
+import { PokemonModal } from '../Modal'
 
 export const Pokedex = () => {
 
     const [pokeList, setPokeList] = React.useState([])
+    const [idModal, setIdModal] = React.useState(false)
+
+    React.useEffect(() => {
+        function handleModalClick(e) {
+            setIdModal(e.target.id)
+        }
+        window.addEventListener('click', handleModalClick)
+    }, [])
 
     React.useEffect(() => {
         const globalFetch = async () => {
@@ -30,7 +39,9 @@ export const Pokedex = () => {
 
     return (
         <div>
-            <h2>Pokemons</h2>
+            {idModal && <PokemonModal id={idModal}/>}
+            <h2 className='subtitle'>Pokemons</h2>
+
             <section className='content'>
                 {pokeList && pokeList.map(pokemon => (
                     <div key={pokemon.id} className='card'>
@@ -46,24 +57,27 @@ export const Pokedex = () => {
                             </div>
 
                             <div className='body'>
-
-                                <p> <WeightIcon/> Altura: {pokemon.height / 10}m</p>
-                                <p> <RulerIcon/> Peso: {pokemon.weight / 10}kg</p>
+                                <p><span><RulerIcon /></span>Altura: {pokemon.height / 10}m</p>
+                                <p><span><WeightIcon /></span>Peso: {pokemon.weight / 10}kg</p>
                             </div>
                         </div>
 
+                        <div className="pokemon-stat">
                         <div className='stats'>
-                            {pokemon.stats.map((stat) => {
+                            {pokemon.stats.map((stats, index) => {
                                 return (
-                                    <div className='stat'>
-                                        <p>{stat.name}</p>
-                                        <div className='bar-value'>
-                                            <div className='bar' style={{ "width": stat.stat + "%" }}></div>
+                                    <div className='stat' key={index}>
+                                        <p>{stats.name}</p>
+                                        <div className='bar'>
+                                            <div className='bar-progress' style={{ "width": stats.stat + "%" }}></div>
                                         </div>
-                                        <div className='stat-value'>{stat.stat}</div>
+                                        <p className='stat-value'>{stats.stat}</p>
                                     </div>
                                 )
                             })}
+                        </div>
+                        
+                        <button id={pokemon.id}>Modal</button>
                         </div>
                     </div>
                 ))}
