@@ -14,7 +14,7 @@ h1{
     color: #fff;
 }
 
-button{
+.searchBtn{
     margin-left: .8rem;
     height: 1.5rem;
     width: 5rem;
@@ -27,7 +27,7 @@ button{
     transition: .1s;
 }
 
-button:hover{
+.searchBtn:hover{
     background: #fff;
 }
 

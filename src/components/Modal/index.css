@@ -1,12 +1,25 @@
 .modal{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #0000007c;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, .8);
+    padding: 2rem calc(4rem + 15px) 2rem 4rem;
+}
 
+.modalCard{
+    width: 80%;
+    background: #636465af;
+}
+
+@media (max-width: 40rem) {
+    .modal{
+        padding: 2rem calc(2rem + 15px) 2rem 2rem;
+    }
 }

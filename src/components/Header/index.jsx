@@ -33,7 +33,7 @@ export const Header = () => {
                             type="text"
                             value={pokemon}
                             onChange={({ target }) => setPokemon(target.value)} />
-                        <button>Buscar</button>
+                        <button className='searchBtn'>Buscar</button>
                     </form>
                 </nav>
             </header>

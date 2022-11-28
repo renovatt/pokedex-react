@@ -39,12 +39,12 @@ export const Pokedex = () => {
 
     return (
         <div>
-            {idModal && <PokemonModal id={idModal}/>}
+            {idModal && <PokemonModal id={idModal} />}
             <h2 className='subtitle'>Pokemons</h2>
 
             <section className='content'>
                 {pokeList && pokeList.map(pokemon => (
-                    <div key={pokemon.id} className='card'>
+                    <div key={pokemon.id} className={`card card${pokemon.types[0]}`}>
 
                         <div className='pokemon-info'>
                             <img src={pokemon.image} alt={pokemon.name} />
@@ -63,21 +63,27 @@ export const Pokedex = () => {
                         </div>
 
                         <div className="pokemon-stat">
-                        <div className='stats'>
-                            {pokemon.stats.map((stats, index) => {
-                                return (
-                                    <div className='stat' key={index}>
-                                        <p>{stats.name}</p>
-                                        <div className='bar'>
-                                            <div className='bar-progress' style={{ "width": stats.stat + "%" }}></div>
+                            <div className='stats'>
+                                {pokemon.stats.map((stats, index) => {
+                                    return (
+                                        <div className='stat' key={index}>
+                                            <p>{stats.name}</p>
+                                            <div className='bar'>
+                                                <div className='bar-progress' style={{ "width": stats.stat + "%" }}></div>
+                                            </div>
+                                            <p className='stat-value'>{stats.stat}</p>
                                         </div>
-                                        <p className='stat-value'>{stats.stat}</p>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                        
-                        <button id={pokemon.id}>Modal</button>
+                                    )
+                                })}
+                            </div>
+
+                            {pokemon.types && (
+                                <button
+                                    className={`${pokemon.types[0]} btn`}
+                                    id={pokemon.id}>
+                                    Mais detalhes
+                                </button>
+                            )}
                         </div>
                     </div>
                 ))}

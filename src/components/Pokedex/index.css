@@ -10,7 +10,6 @@
     height: 22rem;
     width: 38rem;
     border-radius: .4rem;
-    background: #183333;
     margin: .2rem;
     margin-top: 2rem;
 }
@@ -23,16 +22,17 @@
     padding: .4rem;
 }
 
-h2, p {
+h2,
+p {
     color: #fff;
 }
 
-.subtitle{
+.subtitle {
     color: #000;
     margin-bottom: 2rem;
 }
 
-.pokemon-stat{
+.pokemon-stat {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +81,7 @@ h2, p {
     background: #00ff08;
 }
 
-.stat-value{
+.stat-value {
     margin-left: .4rem;
 }
 
@@ -123,7 +123,6 @@ h2, p {
 img {
     width: 200px;
 }
-
 
 .bug {
     background: #7bcf00;
@@ -251,76 +250,111 @@ img {
     background-position: 5px;
 }
 
-
-
-/* .bug {
-    color: #7bcf00;
+.btn {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 15rem;
+    outline: none;
+    border-radius: .4rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border: none;
+    transition: .2s;
+    color: #111;
+    background-image: none;
 }
 
-.dark {
-    color: #5a566a;
+.btn:hover {
+    background-color: #ffd;
 }
 
-.dragon {
-    color: #0076ff;
+.cardbug {
+    background: #7bcf00;
+    background: radial-gradient(circle, #7bcf00 -90%, #1b1b1b 55%);
 }
 
-.electric {
-    color: #ffde00;
+.carddark {
+    background: #5a566a;
+    background: radial-gradient(circle, #5a566a -90%, #1b1b1b 55%);
 }
 
-.fairy {
-    color: #ff76ff;
+.carddragon {
+    background: #0076ff;
+    background: radial-gradient(circle, #0076ff -90%, #1b1b1b 55%);
+
 }
 
-.fighting {
-    color: #ff215b;
+.cardelectric {
+    background: #ffde00;
+    background: radial-gradient(circle, #ffde00 -90%, #1b1b1b 55%);
 }
 
-.fire {
-    color: #ff9900;
+.cardfairy {
+    background: #ff76ff;
+    background: radial-gradient(circle, #ff76ff -90%, #1b1b1b 55%);
 }
 
-.flying {
-    color: #89bdff;
+.cardfighting {
+    background: #ff215b;
+    background: radial-gradient(circle, #ff215b -90%, #1b1b1b 55%);
 }
 
-.ghost {
-    color: #4e6aff;
+.cardfire {
+    background: #ff9900;
+    background: radial-gradient(circle, #ff9900 -90%, #1b1b1b 55%);
 }
 
-.grass {
-    color: #1cd80e;
+.cardflying {
+    background: #89bdff;
+    background: radial-gradient(circle, #89bdff -90%, #1b1b1b 55%);
 }
 
-.ground {
-    color: #ff6b0d;
+.cardghost {
+    background: #4e6aff;
+    background: radial-gradient(circle, #4e6aff -90%, #1b1b1b 55%);
 }
 
-.ice {
-    color: #2ee4c6;
+.cardgrass {
+    background: #1cd80e;
+    background: radial-gradient(circle, #1cd80e -90%, #1b1b1b 55%);
 }
 
-.normal {
-    color: #9fa39d;
+.cardground {
+    background: #ff6b0d;
+    background: radial-gradient(circle, #ff6b0d -90%, #1b1b1b 55%);
 }
 
-.poison {
-    color: #f149ff;
+.cardice {
+    background: #2ee4c6;
+    background: radial-gradient(circle, #2ee4c6 -90%, #1b1b1b 55%);
 }
 
-.psychic {
-    color: #ff6c64;
+.cardnormal {
+    background: #9fa39d;
+    background: radial-gradient(circle, #9fa39d -90%, #1b1b1b 55%);
 }
 
-.rock {
-    color: #d8bc5a;
+.cardpoison {
+    background: #f149ff;
+    background: radial-gradient(circle, #f149ff -90%, #1b1b1b 55%);
 }
 
-.steel {
-    color: #23a1bd;
+.cardpsychic {
+    background: #ff6c64;
+    background: radial-gradient(circle, #ff6c64 -90%, #1b1b1b 55%);
 }
 
-.water {
-    color: #14a8ff;
-} */
+.cardrock {
+    background: #d8bc5a;
+    background: radial-gradient(circle, #d8bc5a -90%, #1b1b1b 55%);
+}
+
+.cardsteel {
+    background: #23a1bd;
+    background: radial-gradient(circle, #23a1bd -90%, #1b1b1b 55%);
+}
+
+.cardwater {
+    background: #14a8ff;
+    background: radial-gradient(circle, #14a8ff -90%, #1b1b1b 55%);
+}

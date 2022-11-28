@@ -22,10 +22,11 @@ export const PokemonModal = ({ id }) => {
         modalFetch()
     }, [id])
 
+    // console.log(types[0].type.name)
     return (
         <div className='modal'>
             {pokemon && (
-                <div className='card modalActive'>
+                <div className='card modalCard'>
                     <div className='pokemon-info'>
                         <img src={sprites.other.home.front_default} alt={name} />
                         <p>#0{id}</p>
