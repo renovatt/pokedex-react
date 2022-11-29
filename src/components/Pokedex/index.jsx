@@ -58,8 +58,8 @@ export const Pokedex = () => {
                             </div>
 
                             <div className='body'>
-                                <p><span><RulerIcon /></span>Altura: {pokemon.height / 10}m</p>
-                                <p><span><WeightIcon /></span>Peso: {pokemon.weight / 10}kg</p>
+                                <p><span><RulerIcon /></span>Altura: {pokemon.height / 10} m</p>
+                                <p><span><WeightIcon /></span>Peso: {pokemon.weight / 10} kg</p>
                             </div>
                         </div>
 

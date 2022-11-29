@@ -1,24 +1,9 @@
 import React from 'react'
 import './index.css'
-import styled, { keyframes } from 'styled-components'
+import { ProgressBar } from './style'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
-
-const progressBar = keyframes`
-to{
-    transform: initial;
-}`
-
-const ProgressBar = styled.div`
-    height: .5rem;
-    border-radius: .25rem;
-    width: ${(props) =>
-        props.base_stat >= 100 ? "100%" : `${props.base_stat}%`};
-    background: ${(props) =>
-        (props.base_stat >= 50 ? '#00ff08' : '#ff0000')};
-    transform: translate3d(-100%, 0, 0);
-    animation: ${progressBar} 2s forwards;
-`
+import { ReactComponent as Pokeball } from '../../assets/divider-pokeball.svg'
 
 export const PokemonModal = ({ id }) => {
 
@@ -39,38 +24,38 @@ export const PokemonModal = ({ id }) => {
         modalFetch()
     }, [id])
 
-    // console.log(types[0].type.name)
     return (
         <div className='modal'>
             {pokemon && (
-                <div className='card modalCard'>
-                    <div className='pokemon-info'>
+                <div className='modal-card'>
+                    <div className='modal-pokemon-info'>
                         <img src={sprites.other.home.front_default} alt={name} />
-                        <p>#0{id}</p>
+                        <span>#0{id}</span>
                         <h2>{name}</h2>
 
-                        <div className="types">
+                        <div className="modal-types">
                             {types.map(({ type }) => (
                                 <p key={type.name} className={type.name}>{type.name}</p>
                             ))}
                         </div>
 
-                        <div className='body'>
-                            <p><span><RulerIcon /></span>Altura: {height / 10}m</p>
-                            <p><span><WeightIcon /></span>Peso: {weight / 10}kg</p>
+                        <div className='modal-body'>
+                            <div><span><RulerIcon /></span>Altura: {height / 10} m</div>
+                            <div><span><WeightIcon /></span>Peso: {weight / 10} kg</div>
                         </div>
                     </div>
 
-                    <div className="pokemon-stat">
-                        <div className='stats'>
+                    <Pokeball className='pokeball'/>
+
+                    <div className="modal-pokemon-stat">
+                        <div className='modal-stats'>
                             {stats.map(({ stat, base_stat }) => {
                                 return (
-                                    <div className='stat' >
-                                        <p>{stat.name}</p>
-                                        <p className='stat-value'>{base_stat}</p>
-                                        <div className='bar'>
+                                    <div className='modal-stat' >
+                                        <span className='modal-stat-name'>{stat.name}</span>
+                                        <span className='modal-stat-value'>{base_stat}</span>
+                                        <div className='modal-bar'>
                                             <ProgressBar base_stat={base_stat}></ProgressBar>
-                                            {/* <div className='bar-progress' style={{ "width": base_stat + "%" }}></div> */}
                                         </div>
                                     </div>
                                 )
