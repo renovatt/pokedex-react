@@ -69,16 +69,18 @@ p {
     align-items: center;
     margin: .2rem;
     width: 100%;
-    height: 8px;
-    border-radius: .4rem;
-    background: #e7e3e37c;
+    height: .5rem;
+    border-radius: .25rem;
+    background: #555;
+    overflow: hidden;
 }
 
 .bar-progress {
-    height: 8px;
+    height: .5rem;
     max-width: 100%;
     border-radius: .4rem;
     background: #00ff08;
+    /* background: #ff0000; */
 }
 
 .stat-value {

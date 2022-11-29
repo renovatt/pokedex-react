@@ -1,7 +1,24 @@
 import React from 'react'
 import './index.css'
+import styled, { keyframes } from 'styled-components'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
+
+const progressBar = keyframes`
+to{
+    transform: initial;
+}`
+
+const ProgressBar = styled.div`
+    height: .5rem;
+    border-radius: .25rem;
+    width: ${(props) =>
+        props.base_stat >= 100 ? "100%" : `${props.base_stat}%`};
+    background: ${(props) =>
+        (props.base_stat >= 50 ? '#00ff08' : '#ff0000')};
+    transform: translate3d(-100%, 0, 0);
+    animation: ${progressBar} 2s forwards;
+`
 
 export const PokemonModal = ({ id }) => {
 
@@ -46,14 +63,15 @@ export const PokemonModal = ({ id }) => {
 
                     <div className="pokemon-stat">
                         <div className='stats'>
-                            {stats.map((stats, index) => {
+                            {stats.map(({ stat, base_stat }) => {
                                 return (
-                                    <div className='stat' key={index}>
-                                        <p>{stats.stat.name}</p>
+                                    <div className='stat' >
+                                        <p>{stat.name}</p>
+                                        <p className='stat-value'>{base_stat}</p>
                                         <div className='bar'>
-                                            <div className='bar-progress' style={{ "width": stats.base_stat + "%" }}></div>
+                                            <ProgressBar base_stat={base_stat}></ProgressBar>
+                                            {/* <div className='bar-progress' style={{ "width": base_stat + "%" }}></div> */}
                                         </div>
-                                        <p className='stat-value'>{stats.base_stat}</p>
                                     </div>
                                 )
                             })}

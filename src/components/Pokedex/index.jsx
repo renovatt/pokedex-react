@@ -4,6 +4,7 @@ import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
 import { PokemonModal } from '../Modal'
 
+
 export const Pokedex = () => {
 
     const [pokeList, setPokeList] = React.useState([])
@@ -69,7 +70,9 @@ export const Pokedex = () => {
                                         <div className='stat' key={index}>
                                             <p>{stats.name}</p>
                                             <div className='bar'>
-                                                <div className='bar-progress' style={{ "width": stats.stat + "%" }}></div>
+                                                <div className='bar-progress'
+                                                    style={{ "width": stats.stat + "%" }}>
+                                                </div>
                                             </div>
                                             <p className='stat-value'>{stats.stat}</p>
                                         </div>
