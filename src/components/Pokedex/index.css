@@ -1,17 +1,23 @@
+.subtitle {
+    color: #000;
+}
+
 .content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem;
 }
 
 .card {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    height: 22rem;
-    width: 38rem;
-    border-radius: .4rem;
+    width: 25rem;
+    height: 20rem;
     margin: .2rem;
-    margin-top: 2rem;
+    margin-top: 8rem;
+    border-radius: 2rem;
 }
 
 .pokemon-info {
@@ -19,72 +25,25 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 20rem;
     padding: .4rem;
+    margin-top: -10rem;
 }
 
-h2,
-p {
+.pokemon-info img {
+    width: 250px;
+}
+
+.pokemon-info span {
     color: #fff;
-}
-
-.subtitle {
-    color: #000;
-    margin-bottom: 2rem;
-}
-
-.pokemon-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.stats {
-    display: flex;
-    flex-direction: column;
-    margin: .4rem;
-    padding: .2rem;
-    width: 330px;
-    border-radius: .4rem;
-    background: #000000ae;
-}
-
-.stat {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: .2rem;
-    padding: .2rem;
-}
-
-.stat p {
     font-weight: bold;
-    font-size: .8rem;
-    width: 60px;
-    text-transform: capitalize;
+    font-size: 1.5rem;
 }
 
-.bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: .2rem;
-    width: 100%;
-    height: .5rem;
-    border-radius: .25rem;
-    background: #555;
-    overflow: hidden;
-}
-
-.bar-progress {
-    height: .5rem;
-    max-width: 100%;
-    border-radius: .4rem;
-    background: #00ff08;
-    /* background: #ff0000; */
-}
-
-.stat-value {
-    margin-left: .4rem;
+.pokemon-info h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .types {
@@ -93,11 +52,13 @@ p {
     align-items: center;
 }
 
-.types p {
+.types span {
     color: #fff;
     margin: .4rem;
+    font-size: 1rem;
     padding: .2rem 1.5rem;
     border-radius: .4rem;
+    text-transform: capitalize;
 }
 
 .body {
@@ -106,24 +67,20 @@ p {
     align-items: center;
 }
 
-.body p {
+.body div {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
     margin: .2rem;
     padding: .2rem;
-    width: 120px;
     border-radius: .4rem;
     color: #fff;
-    background: #000;
 }
 
-.body p span {
-    margin-right: 1px;
-}
-
-img {
-    width: 200px;
+.body div span {
+    margin-right: .5rem;
 }
 
 .bug {
@@ -254,20 +211,16 @@ img {
 
 .btn {
     cursor: pointer;
-    height: 2.5rem;
-    width: 15rem;
+    height: 3.5rem;
+    width: 100%;
     outline: none;
-    border-radius: .4rem;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     border: none;
+    color: #fff;
     transition: .2s;
-    color: #111;
+    border-radius: 0 0 2rem 2rem;
     background-image: none;
-}
-
-.btn:hover {
-    background-color: #ffd;
 }
 
 .cardbug {

@@ -71,11 +71,13 @@
     align-items: center;
 }
 
-.modal-types p {
+.modal-types span {
     color: #fff;
     margin: .4rem;
     padding: .2rem 1.5rem;
     border-radius: .4rem;
+    font-size: 1rem;
+    text-transform: capitalize;
 }
 
 .modal-body {

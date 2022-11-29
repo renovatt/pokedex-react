@@ -35,7 +35,7 @@ export const PokemonModal = ({ id }) => {
 
                         <div className="modal-types">
                             {types.map(({ type }) => (
-                                <p key={type.name} className={type.name}>{type.name}</p>
+                                <span key={type.name} className={type.name}>{type.name}</span>
                             ))}
                         </div>
 
@@ -45,7 +45,7 @@ export const PokemonModal = ({ id }) => {
                         </div>
                     </div>
 
-                    <Pokeball className='pokeball'/>
+                    <Pokeball className='pokeball' />
 
                     <div className="modal-pokemon-stat">
                         <div className='modal-stats'>

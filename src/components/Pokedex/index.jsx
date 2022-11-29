@@ -49,45 +49,33 @@ export const Pokedex = () => {
 
                         <div className='pokemon-info'>
                             <img src={pokemon.image} alt={pokemon.name} />
-                            <p>#0{pokemon.id}</p>
+                            <span>#0{pokemon.id}</span>
                             <h2>{pokemon.name}</h2>
 
                             <div className="types">
                                 {pokemon.types.map((name, index) =>
-                                    (<p className={name} key={index}>{name}</p>))}
+                                    (<span className={name} key={index}>{name}</span>))}
                             </div>
 
                             <div className='body'>
-                                <p><span><RulerIcon /></span>Altura: {pokemon.height / 10} m</p>
-                                <p><span><WeightIcon /></span>Peso: {pokemon.weight / 10} kg</p>
+                                <div>
+                                    <span><RulerIcon /></span>
+                                    Altura: {pokemon.height / 10} m
+                                </div>
+                                <div>
+                                    <span><WeightIcon /></span>
+                                    Peso: {pokemon.weight / 10} kg
+                                </div>
                             </div>
                         </div>
 
-                        <div className="pokemon-stat">
-                            <div className='stats'>
-                                {pokemon.stats.map((stats, index) => {
-                                    return (
-                                        <div className='stat' key={index}>
-                                            <p>{stats.name}</p>
-                                            <div className='bar'>
-                                                <div className='bar-progress'
-                                                    style={{ "width": stats.stat + "%" }}>
-                                                </div>
-                                            </div>
-                                            <p className='stat-value'>{stats.stat}</p>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-
-                            {pokemon.types && (
-                                <button
-                                    className={`${pokemon.types[0]} btn`}
-                                    id={pokemon.id}>
-                                    Mais detalhes
-                                </button>
-                            )}
-                        </div>
+                        {pokemon.types && (
+                            <button
+                                className={`${pokemon.types[0]} btn`}
+                                id={pokemon.id}>
+                                Mais Detalhes
+                            </button>
+                        )}
                     </div>
                 ))}
             </section>
