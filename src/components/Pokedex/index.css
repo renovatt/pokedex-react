@@ -1,7 +1,3 @@
-.subtitle {
-    color: #000;
-}
-
 .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -219,8 +215,9 @@
     border: none;
     color: #fff;
     transition: .2s;
-    border-radius: 0 0 2rem 2rem;
     background-image: none;
+    border-radius: 0 0 2rem 2rem;
+    text-shadow: 1px 1px 5px #000;
 }
 
 .cardbug {
@@ -236,7 +233,6 @@
 .carddragon {
     background: #0076ff;
     background: radial-gradient(circle, #0076ff -90%, #1b1b1b 55%);
-
 }
 
 .cardelectric {

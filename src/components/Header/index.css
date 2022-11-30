@@ -8,6 +8,7 @@
     justify-content: space-around;
     align-items: center;
     background: #d67f0d;
+    z-index: 999;
 }
 
 h1{

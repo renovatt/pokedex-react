@@ -1,4 +1,4 @@
-.modal {
+.modal-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,6 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    border: 1px solid #000;
     background: rgba(0, 0, 0, .4);
     padding: 2rem calc(4rem + 15px) 2rem 4rem;
 }
@@ -117,7 +116,7 @@
     flex-direction: column;
     margin: .4rem;
     padding: .2rem;
-    width: 40rem;
+    width: 30rem;
     border-radius: .4rem;
 }
 
@@ -132,14 +131,14 @@
 .modal-stat-name {
     font-weight: bold;
     font-size: .9rem;
-    width: 70px;
+    width: 80px;
     color: #fff;
     text-transform: capitalize;
 }
 
 .modal-stat-value {
     color: #fff;
-    width: 30px;
+    width: 40px;
     margin-left: .4rem;
 }
 

@@ -25,7 +25,7 @@ export const PokemonModal = ({ id }) => {
     }, [id])
 
     return (
-        <div className='modal'>
+        <div className='modal-container'>
             {pokemon && (
                 <div className='modal-card'>
                     <div className='modal-pokemon-info'>
@@ -51,7 +51,7 @@ export const PokemonModal = ({ id }) => {
                         <div className='modal-stats'>
                             {stats.map(({ stat, base_stat }) => {
                                 return (
-                                    <div className='modal-stat' >
+                                    <div className='modal-stat' key={stat.name}>
                                         <span className='modal-stat-name'>{stat.name}</span>
                                         <span className='modal-stat-value'>{base_stat}</span>
                                         <div className='modal-bar'>

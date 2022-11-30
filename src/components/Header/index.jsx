@@ -3,7 +3,7 @@ import { Preview } from '../Preview'
 import './index.css'
 
 export const Header = () => {
-    const [pokemon, setPokemon] = React.useState('6')
+    const [pokemon, setPokemon] = React.useState('197')
     const [pokemonPreview, setPokemonPreview] = React.useState('')
     const { id, name, types, sprites } = pokemonPreview
 

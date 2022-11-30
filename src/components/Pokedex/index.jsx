@@ -8,11 +8,11 @@ import { PokemonModal } from '../Modal'
 export const Pokedex = () => {
 
     const [pokeList, setPokeList] = React.useState([])
-    const [idModal, setIdModal] = React.useState(false)
+    const [pokemonID, setPokemonID] = React.useState(false)
 
     React.useEffect(() => {
         function handleModalClick(e) {
-            setIdModal(e.target.id)
+            setPokemonID(e.target.id)
         }
         window.addEventListener('click', handleModalClick)
     }, [])
@@ -40,9 +40,8 @@ export const Pokedex = () => {
 
     return (
         <div>
-            {idModal && <PokemonModal id={idModal} />}
-            <h2 className='subtitle'>Pokemons</h2>
-
+            <h2>Search Component</h2>
+            {pokemonID && <PokemonModal id={pokemonID} />}
             <section className='content'>
                 {pokeList && pokeList.map(pokemon => (
                     <div key={pokemon.id} className={`card card${pokemon.types[0]}`}>
