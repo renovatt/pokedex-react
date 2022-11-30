@@ -24,7 +24,7 @@ export const Header = () => {
     }
 
     return (
-        <>
+        <div className='header-container'>
             <header className='header'>
                 <h1>Pokedex</h1>
                 <nav>
@@ -38,6 +38,6 @@ export const Header = () => {
                 </nav>
             </header>
             <Preview id={id} name={name} types={types} sprites={sprites}/>
-        </>
+        </div>
     )
 }
