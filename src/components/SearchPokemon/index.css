@@ -12,9 +12,36 @@
     background: #333;
     height: 5rem;
     width: 100%;
+    border-radius: .4rem;
     margin-bottom: .4rem;
 }
 
+.search-header form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+}
+
+.search-header input{
+    text-align: center;
+    border: none;
+    outline: none;
+    height: 2.3rem;
+    border-radius: .4rem;
+}
+
+.search-header button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    height: 2.3rem;
+    border-radius: .4rem;
+    margin-left: .4rem;
+    width: 5rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
 
 .search-card {
     display: flex;

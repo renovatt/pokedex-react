@@ -2,7 +2,7 @@ import React from 'react'
 import './index.css'
 
 export const SearchPokemon = () => {
-    const [pokemon, setPokemon] = React.useState('')
+    const [pokemon, setPokemon] = React.useState('10022')
     const [pokemonPreview, setPokemonPreview] = React.useState('')
     const { id, name, types, sprites } = pokemonPreview
 
@@ -26,6 +26,7 @@ export const SearchPokemon = () => {
             <section className='search-header'>
                 <form onSubmit={handleSubmit}>
                     <input
+                        placeholder='Procure o seu pokemon'
                         type="text"
                         value={pokemon}
                         onChange={({ target }) => setPokemon(target.value)} />
