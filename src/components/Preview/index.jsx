@@ -3,6 +3,7 @@ import './index.css'
 
 export const Preview = () => {
     const [pokemonPreview, setPokemonPreview] = React.useState('')
+    // const [currentIndex, setCurrentIndex] = React.useState(0)
     const { id, name, types, sprites } = pokemonPreview
 
     const arrPreview = [197, 215, 359, 553, 717, 727, 243, 145, 149, 384, 483, 484, 643, 644, 646, 10007, 144, 10022, 10023, 10104, 644, 807]
@@ -13,13 +14,18 @@ export const Preview = () => {
         if (json) setPokemonPreview(json)
     }
 
-    function random() {
-        const randomPokemon = arrPreview[Math.floor(Math.random() * arrPreview.length)]
-        searchPokemon(randomPokemon)
+    let count = 0
+    const getIndex = () => {
+        if(count == arrPreview.length){
+            count = -1
+        }
+        searchPokemon(arrPreview[count++])
     }
-
+    
     React.useEffect(() => {
-        setInterval(random, 20000)
+        searchPokemon('25')
+        const set = setInterval(() => getIndex(), 5000)
+        return () => clearInterval(set)
     }, [])
 
     return (

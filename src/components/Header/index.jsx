@@ -2,6 +2,7 @@ import React from 'react'
 import './index.css'
 
 export const Header = () => {
+
     return (
             <header className='header'>
                 <h1>Pokedex</h1>
