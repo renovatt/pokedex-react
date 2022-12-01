@@ -1,24 +1,25 @@
 import React from 'react'
 import './index.css'
+import { Pokedex } from '../Pokedex'
 
 export const SearchPokemon = () => {
-    const [pokemon, setPokemon] = React.useState('10022')
-    const [pokemonPreview, setPokemonPreview] = React.useState('')
-    const { id, name, types, sprites } = pokemonPreview
+    const [pokemon, setPokemon] = React.useState('')
+    const [pokemonFetch, setPokemonFetch] = React.useState('')
+    const { id, name, types, sprites } = pokemonFetch
 
-    const searchPokemon = async (pokemon) => {
+    const fetchPokemon = async (pokemon) => {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
         const json = await response.json()
-        if (json) setPokemonPreview(json)
+        if (json) setPokemonFetch(json)
     }
 
     React.useEffect(() => {
-        searchPokemon(pokemon.toLocaleLowerCase())
+        fetchPokemon(pokemon)
     }, [])
 
     function handleSubmit(e) {
         e.preventDefault()
-        searchPokemon(pokemon.toLocaleLowerCase())
+        fetchPokemon(pokemon.toLocaleLowerCase())
         setPokemon('')
     }
     return (
@@ -30,7 +31,7 @@ export const SearchPokemon = () => {
                         type="text"
                         value={pokemon}
                         onChange={({ target }) => setPokemon(target.value)} />
-                    <button className='searchBtn'>Buscar</button>
+                    <button>Buscar</button>
                 </form>
             </section>
 
@@ -51,8 +52,8 @@ export const SearchPokemon = () => {
                     </div>
                 </div>
             ) : (
-                <div className='search-card'>
-                    <h3>Procure o seu pokemon..</h3>
+                <div className='search-first'>
+                    <h2>Procure pelo seu Pokemon favorito!</h2>
                 </div>
             )}
         </div>

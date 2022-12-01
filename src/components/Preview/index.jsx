@@ -4,7 +4,7 @@ import './index.css'
 export const Preview = () => {
     const [pokemonPreview, setPokemonPreview] = React.useState('')
     const { id, name, types, sprites } = pokemonPreview
-    
+
     const arrPreview = [197, 215, 359, 553, 717, 727, 243, 145, 149, 384, 483, 484, 643, 644, 646, 10007, 144, 10022, 10023, 10104, 644, 807]
 
     const searchPokemon = async (pokemon) => {
@@ -14,12 +14,12 @@ export const Preview = () => {
     }
 
     function random() {
-        const randomPokemon = arrPreview[Math.floor(Math.random() * arrPreview.length) -1]
+        const randomPokemon = arrPreview[Math.floor(Math.random() * arrPreview.length)]
         searchPokemon(randomPokemon)
     }
 
     React.useEffect(() => {
-        setInterval(random, 15000)
+        setInterval(random, 20000)
     }, [])
 
     return (

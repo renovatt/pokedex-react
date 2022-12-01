@@ -3,7 +3,6 @@ import './index.css'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
 import { PokemonModal } from '../Modal'
-import { SearchPokemon } from '../SearchPokemon'
 
 
 export const Pokedex = () => {
@@ -40,8 +39,7 @@ export const Pokedex = () => {
     }, [])
 
     return (
-        <div className='container'>
-            <SearchPokemon/>
+        <>
             {pokemonID && <PokemonModal id={pokemonID} />}
             <section className='content'>
                 {pokeList && pokeList.map(pokemon => (
@@ -79,6 +77,6 @@ export const Pokedex = () => {
                     </div>
                 ))}
             </section>
-        </div>
+        </>
     )
 }

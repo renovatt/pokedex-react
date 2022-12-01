@@ -1,7 +1,7 @@
 .search-container{
     width: 98%;
-    height: 100vh;
     border-radius: .4rem;
+    margin-bottom: 2rem;
 }
 
 .search-header{
@@ -9,11 +9,11 @@
     justify-content: start;
     align-items: center;
     padding-left: 2rem;
-    background: #333;
     height: 5rem;
     width: 100%;
     border-radius: .4rem;
     margin-bottom: .4rem;
+    background: #333;
 }
 
 .search-header form{
@@ -41,6 +41,8 @@
     width: 5rem;
     font-weight: bold;
     font-size: 1rem;
+    color: #fff;
+    background: #0059ff;
 }
 
 .search-card {
@@ -50,6 +52,7 @@
     width: 100%;
     height: 29rem;
     border-radius: .4rem;
+    background: #333;
 }
 
 .search-info {
@@ -102,4 +105,16 @@
     height: 100%;
     object-fit: cover;
     filter: drop-shadow(0 0 0.75rem rgb(57, 55, 56));
+}
+
+.search-first{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 2rem;
+    height: 5rem;
+    width: 100%;
+    border-radius: .4rem;
+    margin-bottom: .4rem;
+    background: #ff7700;
 }

@@ -5,10 +5,10 @@
     height: 30rem;
     width: 98%;
     padding: .2rem;
-    margin-top: 8rem;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
     border-radius: .4rem;
-    background: #ddd;
+    background: #fff;
 }
 
 .preview-logo {
@@ -18,7 +18,7 @@
     height: 29rem;
     border-radius: .4rem;
     width: 30%;
-    background: #555;
+    background: #777;
 }
 
 .preview-card {
