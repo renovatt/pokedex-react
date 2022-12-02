@@ -45,7 +45,7 @@ export const PokemonModal = ({ id }) => {
                         </div>
                     </div>
 
-                    <Pokeball className='pokeball' />
+                    <Pokeball className='pokeball-icon' />
 
                     <div className="modal-pokemon-stat">
                         <div className='modal-stats'>

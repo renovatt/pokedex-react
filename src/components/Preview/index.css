@@ -11,13 +11,27 @@
 }
 
 .preview-logo {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 29rem;
     width: 30%;
     border-radius: .4rem;
-    background: #777;
+    background: #fff;
+}
+
+.load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 29rem;
+    width: 100%;
+    background: #181b1d;
+}
+
+.load img{
+    height: 100%;
 }
 
 .preview-card {

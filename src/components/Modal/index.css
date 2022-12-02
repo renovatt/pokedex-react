@@ -33,9 +33,16 @@
     background: rgba(6, 11, 40, 0.149);
 }
 
-@media (max-width: 40rem) {
-    .modal {
-        padding: 2rem calc(2rem + 15px) 2rem 2rem;
+@media (max-width: 71.25rem) {
+    .modal-container{
+        overflow-y: auto;
+    }
+    .modal-card {
+        margin-top: 25rem;
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+        width: 70%;
     }
 }
 
@@ -48,8 +55,8 @@
 }
 
 .modal-pokemon-info img {
-    margin-top: -200px;
-    width: 300px;
+    margin-top: -15rem;
+    width: 20rem;
 }
 
 .modal-pokemon-info span {
@@ -102,7 +109,7 @@
     margin-right: .5rem;
 }
 
-.pokeball{
+.pokeball-icon {
     margin-right: 2rem;
 }
 

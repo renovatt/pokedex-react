@@ -1,15 +1,28 @@
 import React from 'react'
 import './index.css'
+import { Loading } from '../Loading'
+import { Error } from '../Error'
 
 export const SearchPokemon = () => {
     const [pokemon, setPokemon] = React.useState('')
     const [pokemonFetch, setPokemonFetch] = React.useState('')
+    const [isLoading, setIsLoading] = React.useState(false)
+    const [error, setError] = React.useState(false)
     const { id, name, types, sprites } = pokemonFetch
 
     const fetchPokemon = async (pokemon) => {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-        const json = await response.json()
-        if (json) setPokemonFetch(json)
+        setIsLoading(true)
+        try {
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+            const json = await response.json()
+            if (json) {
+                setPokemonFetch(json)
+            }
+        } catch (err) {
+            setError(true)
+        } finally {
+            setIsLoading(false)
+        }
     }
 
     React.useEffect(() => {
@@ -34,7 +47,11 @@ export const SearchPokemon = () => {
                 </form>
             </section>
 
-            {name && types ? (
+            {isLoading ? (
+                <div className='search-card'>
+                    <Loading />
+                </div>
+            ) : name ? (
                 <div className={`search-card animation card${types[0].type.name}`}>
                     <div className='search-info'>
                         <span>#0{id}</span>
@@ -61,6 +78,7 @@ export const SearchPokemon = () => {
                     <h2>Procure pelo seu Pokemon favorito!</h2>
                 </div>
             )}
+            {error && <Error/>}
         </div>
     )
 }
