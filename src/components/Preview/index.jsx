@@ -1,9 +1,9 @@
 import React from 'react'
+import { Loading } from '../Loading'
 import './index.css'
 
 export const Preview = () => {
     const [pokemonPreview, setPokemonPreview] = React.useState('')
-    // const [currentIndex, setCurrentIndex] = React.useState(0)
     const { id, name, types, sprites } = pokemonPreview
 
     const arrPreview = [197, 215, 359, 553, 717, 727, 243, 145, 149, 384, 483, 484, 643, 644, 646, 10007, 144, 10022, 10023, 10104, 644, 807]
@@ -14,14 +14,14 @@ export const Preview = () => {
         if (json) setPokemonPreview(json)
     }
 
-    let count = 0
+    let index = 0
     const getIndex = () => {
-        if(count == arrPreview.length){
-            count = -1
+        if (index == arrPreview.length) {
+            index = -1
         }
-        searchPokemon(arrPreview[count++])
+        searchPokemon(arrPreview[index++])
     }
-    
+
     React.useEffect(() => {
         searchPokemon('25')
         const set = setInterval(() => getIndex(), 5000)
@@ -35,7 +35,7 @@ export const Preview = () => {
             </div>
 
             {name && types ? (
-                <div className={`preview-card card${types[0].type.name}`}>
+                <div className={`preview-card animation card${types[0].type.name}`}>
                     <div className='preview-info'>
                         <span>#0{id}</span>
                         <h1>{name}</h1>
@@ -52,7 +52,7 @@ export const Preview = () => {
                 </div>
             ) : (
                 <div className='preview-card'>
-                    <h3>Procure o seu pokemon..</h3>
+                    <Loading />
                 </div>
             )}
         </div>

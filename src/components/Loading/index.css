@@ -1,0 +1,12 @@
+.load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 29rem;
+    width: 100%;
+    background: #181b1d;
+}
+
+.load img{
+    height: 100%;
+}

@@ -1,6 +1,5 @@
 import React from 'react'
 import './index.css'
-import { Pokedex } from '../Pokedex'
 
 export const SearchPokemon = () => {
     const [pokemon, setPokemon] = React.useState('')
@@ -36,7 +35,7 @@ export const SearchPokemon = () => {
             </section>
 
             {name && types ? (
-                <div className={`search-card card${types[0].type.name}`}>
+                <div className={`search-card animation card${types[0].type.name}`}>
                     <div className='search-info'>
                         <span>#0{id}</span>
                         <h1>{name}</h1>
