@@ -2,11 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     height: 10rem;
     color: #fff;
-    padding: 3rem;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, .4);
+    border-top: 1px solid #444;
 }
 
 .footer p {

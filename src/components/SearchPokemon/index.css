@@ -1,10 +1,10 @@
-.search-container{
+.search-container {
     width: 98%;
     border-radius: .4rem;
     margin-bottom: 2rem;
 }
 
-.search-header{
+.search-header {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -13,17 +13,17 @@
     width: 100%;
     border-radius: .4rem;
     margin-bottom: .4rem;
-    background: #333;
+    background: #000;
 }
 
-.search-header form{
+.search-header form {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 4rem;
 }
 
-.search-header input{
+.search-header input {
     text-align: center;
     border: none;
     outline: none;
@@ -31,7 +31,7 @@
     border-radius: .4rem;
 }
 
-.search-header button{
+.search-header button {
     cursor: pointer;
     border: none;
     outline: none;
@@ -42,7 +42,7 @@
     font-weight: bold;
     font-size: 1rem;
     color: #fff;
-    background: #0059ff;
+    background: #051d48;
 }
 
 .search-card {
@@ -52,16 +52,14 @@
     width: 100%;
     height: 29rem;
     border-radius: .4rem;
-    background: #333;
 }
 
 .search-info {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     height: 25rem;
     width: 15rem;
-    margin-top: -10rem;
 }
 
 .search-info h1 {
@@ -77,7 +75,7 @@
     opacity: .1;
     width: auto;
     color: #fff;
-    font-size: 8rem;
+    font-size: 9rem;
     font-weight: bold;
     text-align: start;
 }
@@ -107,7 +105,23 @@
     filter: drop-shadow(0 0 0.75rem rgb(57, 55, 56));
 }
 
-.search-first{
+.search-btn {
+    cursor: pointer;
+    height: 3.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+    color: #fff;
+    transition: .2s;
+    background-image: none;
+    border-radius: 2rem;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.search-first {
     display: flex;
     justify-content: start;
     align-items: center;

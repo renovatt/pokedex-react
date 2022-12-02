@@ -44,6 +44,12 @@ export const SearchPokemon = () => {
                                 {type.name}
                             </span>
                         ))}
+
+                        <button
+                            className={`search-btn ${types[0].type.name}`}
+                            id={id}>
+                            Mais Detalhes
+                        </button>
                     </div>
 
                     <div className='search-image'>

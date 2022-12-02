@@ -1,11 +1,18 @@
 .content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 1.75rem auto 2.5rem;
-    row-gap: 2.5rem;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* display: grid; */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
     column-gap: 2rem;
-    background: #000;
+    row-gap: 2.5rem;
+    width: 98%;
+    padding: .2rem;
+    margin: 1.75rem auto 2.5rem;
 }
+
 
 @media (max-width: 61.25rem) {
     .content {
@@ -20,19 +27,13 @@
     }
 }
 
-@media (max-width: 31.25rem) {
-    .content {
-        margin-top: 11.94rem;
-    }
-}
-
 .card {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    width: 25rem;
-    height: 20rem;
+    width: 20rem;
+    height: 19rem;
     margin: .2rem;
     margin-top: 8rem;
     border-radius: 2rem;
