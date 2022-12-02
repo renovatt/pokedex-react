@@ -39,9 +39,9 @@ export const Pokedex = () => {
     }, [])
 
     return (
-        <>
-            {pokemonID && <PokemonModal id={pokemonID} />}
+        // <>
             <section className='content'>
+            {pokemonID && <PokemonModal id={pokemonID} />}
                 {pokeList && pokeList.map(pokemon => (
                     <div key={pokemon.id} className={`card card${pokemon.types[0]}`}>
 
@@ -77,6 +77,6 @@ export const Pokedex = () => {
                     </div>
                 ))}
             </section>
-        </>
+        // </>
     )
 }

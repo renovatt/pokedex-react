@@ -1,7 +1,29 @@
 .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3.5rem;
+    margin: 1.75rem auto 2.5rem;
+    row-gap: 2.5rem;
+    column-gap: 2rem;
+    background: #000;
+}
+
+@media (max-width: 61.25rem) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-column: 1/ -1; */
+    }
+}
+
+@media (max-width: 40.94rem) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 31.25rem) {
+    .content {
+        margin-top: 11.94rem;
+    }
 }
 
 .card {
@@ -14,6 +36,7 @@
     margin: .2rem;
     margin-top: 8rem;
     border-radius: 2rem;
+    animation: fade .8s;
 }
 
 .pokemon-info {
@@ -27,7 +50,7 @@
 }
 
 .pokemon-info img {
-    width: 250px;
+    width: 15rem;
 }
 
 .pokemon-info span {
@@ -78,6 +101,18 @@
 
 .body div span {
     margin-right: .5rem;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -32px, 0);
+    }
+
+    to {
+        opacity: initial;
+        transform: initial;
+    }
 }
 
 .bug {

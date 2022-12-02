@@ -12,11 +12,11 @@
   background: radial-gradient(circle, #3c1053 0%, #362669 55%);
 }
 
-.container{
+/* .container{
   max-width: 50rem;
   padding: 0 1rem;
   margin: 0 auto;
-}
+} */
 
 .animation{
   opacity: 0;

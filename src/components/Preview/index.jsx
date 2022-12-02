@@ -24,7 +24,7 @@ export const Preview = () => {
 
     React.useEffect(() => {
         searchPokemon('25')
-        const set = setInterval(() => getIndex(), 5000)
+        const set = setInterval(() => getIndex(), 8000)
         return () => clearInterval(set)
     }, [])
 
