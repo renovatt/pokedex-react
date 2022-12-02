@@ -6,8 +6,8 @@ export const Header = () => {
 
     return (
         <header className='header'>
-            <h1>Pokedex</h1>
-            <nav className='social-icons'>
+            <h1 className='animation'>Pokédex</h1>
+            <nav className='social-icons animation'>
                 <ul>
                     <li>
                         <a href="https://www.linkedin.com/in/renovatt/" target="_blank">

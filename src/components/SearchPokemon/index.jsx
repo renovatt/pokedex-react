@@ -20,6 +20,7 @@ export const SearchPokemon = () => {
             }
         } catch (err) {
             setError(true)
+            fetchPokemon('')
         } finally {
             setIsLoading(false)
         }
@@ -33,6 +34,7 @@ export const SearchPokemon = () => {
         e.preventDefault()
         fetchPokemon(pokemon.toLocaleLowerCase())
         setPokemon('')
+        setError(false)
     }
     return (
         <div className='search-container'>
@@ -41,6 +43,7 @@ export const SearchPokemon = () => {
                     <input
                         placeholder='Procure o seu pokemon'
                         type="text"
+                        required
                         value={pokemon}
                         onChange={({ target }) => setPokemon(target.value)} />
                     <button>Buscar</button>

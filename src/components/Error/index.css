@@ -1,0 +1,29 @@
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error .message {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    background: #fb1;
+    margin-top: 5rem;
+    border-radius: .4rem;
+}
+
+.message h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 3px 10px #000;
+}
+
+.error .message img {
+    width: 200px;
+    height: 200px;
+    margin-top: -5rem;
+    filter: drop-shadow(0 0 0.25rem rgb(31, 30, 31));
+}
