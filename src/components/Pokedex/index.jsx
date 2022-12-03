@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.css'
+import { FaArrowUp } from 'react-icons/fa'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
 import { PokemonModal } from '../Modal'
@@ -88,7 +89,16 @@ export const Pokedex = () => {
                 <Loading />
                 // <div className='load-message' >Carregando.. </div>
             ) : (
-                <button className='load-button' onClick={() => setLimit(limit + 21)}>Carregar mais</button>
+                <div className='end-buttons'>
+                    <button
+                        className='load-button'
+                        onClick={() => setLimit(limit + 21)}>
+                        Carregar mais
+                    </button>
+                    <button className='to-top' onClick={()=> window.scrollTo(0,0)}>
+                        <FaArrowUp />
+                    </button>
+                </div>
             )}
         </>
     )
