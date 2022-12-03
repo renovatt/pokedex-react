@@ -87,7 +87,6 @@ export const Pokedex = () => {
             </section>
             {load ? (
                 <Loading />
-                // <div className='load-message' >Carregando.. </div>
             ) : (
                 <div className='end-buttons'>
                     <button

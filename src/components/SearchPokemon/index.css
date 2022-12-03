@@ -2,6 +2,7 @@
     width: 98%;
     border-radius: .4rem;
     margin-bottom: 2rem;
+    margin: 0;
 }
 
 .search-header {
@@ -129,7 +130,7 @@
     height: 2.5rem;
     width: 100%;
     border-radius: .4rem;
-    margin-bottom: .4rem;
+    /* margin-bottom: .4rem; */
     background: #ff7700;
 }
 

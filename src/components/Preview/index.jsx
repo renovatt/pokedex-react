@@ -43,7 +43,7 @@ export const Preview = () => {
             {aniLoad ? (
                 <div className='preview-card'>
                     <div className='load'>
-                        {/* <img src={load} alt="load" /> */}
+                        <img src={load} alt="load" />
                     </div>
                 </div>
             ) : name ? (

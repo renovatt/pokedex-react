@@ -104,14 +104,14 @@
     margin-right: .5rem;
 }
 
-.end-buttons{
+.end-buttons {
     display: flex;
     align-items: center;
     padding: .4rem;
     margin-bottom: 2rem;
 }
 
-.to-top{
+.to-top {
     height: 3rem;
     width: 70px;
     color: #fff;
@@ -127,7 +127,7 @@
     justify-content: center;
 }
 
-.load-button{
+.load-button {
     height: 3rem;
     width: 220px;
     color: #fff;
@@ -141,7 +141,7 @@
 }
 
 .load-button:hover,
-.to-top:hover{
+.to-top:hover {
     cursor: pointer;
     background: #fb1;
     text-shadow: 1px 1px 5px #000;

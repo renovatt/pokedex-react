@@ -26,9 +26,9 @@ export const SearchPokemon = () => {
         }
     }
 
-    setTimeout(() => {
-        setError(false)
-    }, 10000);
+    // setTimeout(() => {
+    //     setError(false)
+    // }, 30000);
 
     function handleSubmit(e) {
         e.preventDefault()
