@@ -18,7 +18,12 @@
     height: 29rem;
     width: 30%;
     border-radius: .4rem;
-    background: #fff;
+    background: #000;
+}
+
+.preview-logo img{
+    height: 100%;
+    object-fit: cover;
 }
 
 .load{

@@ -1,5 +1,6 @@
 import React from 'react'
 import load from '../../assets/load-pokeball.gif'
+import ash from '../../assets/ash-2.png'
 import './index.css'
 
 export const Preview = () => {
@@ -35,8 +36,8 @@ export const Preview = () => {
 
     return (
         <div className='preview'>
-            <div className='preview-logo'>
-                <h2>Something</h2>
+            <div className='preview-logo animation'>
+                <img src={ash} alt="Ash" />
             </div>
 
             {aniLoad ? (

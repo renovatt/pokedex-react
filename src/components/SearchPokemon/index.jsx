@@ -26,9 +26,9 @@ export const SearchPokemon = () => {
         }
     }
 
-    React.useEffect(() => {
-        fetchPokemon(pokemon)
-    }, [])
+    setTimeout(() => {
+        setError(false)
+    }, 10000);
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -82,7 +82,7 @@ export const SearchPokemon = () => {
                 //     <h2>Procure pelo seu Pokemon favorito!</h2>
                 // </div>
             )}
-            {error && <Error/>}
+            {error && <Error />}
         </div>
     )
 }
