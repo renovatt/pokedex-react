@@ -99,11 +99,13 @@
 
 @keyframes fall {
     0% {
-        top: -200px
+        top: -200px;
+        opacity: .5;
     }
 
     60% {
-        top: 0
+        top: 0;
+        opacity: 1;
     }
 
     80% {

@@ -3,23 +3,29 @@ import './index.css'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
 import { PokemonModal } from '../Modal'
-
+import { Loading } from '../Loading'
 
 export const Pokedex = () => {
 
     const [pokeList, setPokeList] = React.useState([])
     const [pokemonID, setPokemonID] = React.useState(false)
+    const [limit, setLimit] = React.useState(21)
+    const [load, setLoad] = React.useState(false)
 
     React.useEffect(() => {
         function handleModalClick(e) {
             setPokemonID(e.target.id)
         }
         window.addEventListener('click', handleModalClick)
+        return () => {
+            window.removeEventListener('click', handleModalClick)
+        }
     }, [])
 
     React.useEffect(() => {
+        setLoad(true)
         const globalFetch = async () => {
-            const URLs = await fetch('https://pokeapi.co/api/v2/pokemon/')
+            const URLs = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`)
                 .then(res => res.json())
                 .then(json => json.results)
 
@@ -34,9 +40,10 @@ export const Pokedex = () => {
                 weight: info.weight,
                 height: info.height
             })))
+            setLoad(false)
         }
         globalFetch()
-    }, [])
+    }, [limit])
 
     return (
         <>
@@ -77,6 +84,12 @@ export const Pokedex = () => {
                     </div>
                 ))}
             </section>
+            {load ? (
+                <Loading />
+                // <div className='load-message' >Carregando.. </div>
+            ) : (
+                <button className='load-button' onClick={() => setLimit(limit + 21)}>Carregar mais</button>
+            )}
         </>
     )
 }

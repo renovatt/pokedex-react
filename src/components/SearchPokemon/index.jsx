@@ -77,9 +77,10 @@ export const SearchPokemon = () => {
                     </div>
                 </div>
             ) : (
-                <div className='search-first'>
-                    <h2>Procure pelo seu Pokemon favorito!</h2>
-                </div>
+                <div></div>
+                // <div className='search-first'>
+                //     <h2>Procure pelo seu Pokemon favorito!</h2>
+                // </div>
             )}
             {error && <Error/>}
         </div>

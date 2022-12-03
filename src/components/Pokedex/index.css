@@ -35,7 +35,7 @@
     width: 20rem;
     height: 19rem;
     margin: .2rem;
-    margin-top: 8rem;
+    margin-top: 10rem;
     border-radius: 2rem;
     animation: fade .8s;
 }
@@ -102,6 +102,28 @@
 
 .body div span {
     margin-right: .5rem;
+}
+
+.load-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    border: 1px solid #fff;
+    width: 220px;
+    background: transparent;
+    border-radius: .4rem;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    transition: .2s;
+}
+
+.load-button:hover{
+    cursor: pointer;
+    background: #fb1;
+    text-shadow: 1px 1px 5px #000;
 }
 
 @keyframes fade {

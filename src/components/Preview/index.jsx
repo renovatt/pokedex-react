@@ -7,7 +7,7 @@ export const Preview = () => {
     const [aniLoad, setAniLoad] = React.useState(false)
     const { id, name, types, sprites } = pokemonPreview
 
-    const arrPreview = [197, 215, 359, 553, 717, 727, 243, 145, 149, 384, 483, 484, 643, 644, 646, 10007, 144, 10022, 10023, 10104, 644, 807]
+    const arrPreview = [197, 215, 359, 553, 717, 727, 243, 145, 149, 384, 483, 484, 643, 644, 646, 10007, 144, 10022, 10023, 10104, 644, 807, 150]
 
     const searchPokemon = async (pokemon) => {
         setAniLoad(true)
@@ -28,7 +28,7 @@ export const Preview = () => {
     }
 
     React.useEffect(() => {
-        searchPokemon('25')
+        searchPokemon('150')
         const set = setInterval(() => getIndex(), 8000)
         return () => clearInterval(set)
     }, [])
