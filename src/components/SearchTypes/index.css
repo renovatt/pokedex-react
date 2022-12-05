@@ -1,0 +1,34 @@
+.search-type-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 98%;
+}
+
+.search-type-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-type-nav ul {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-items: center;
+}
+
+.search-type-nav ul li {
+    list-style: none;
+    color: #fff;
+    margin: .4rem;
+    font-size: 1rem;
+    padding: .2rem 1.5rem;
+    border-radius: .4rem;
+    text-transform: capitalize;
+    width: auto;
+}
+
+.search-type-nav ul li:hover {
+    cursor: pointer;
+}
