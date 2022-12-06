@@ -3,6 +3,7 @@ import './index.css'
 import { Loading } from '../Loading'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
+import { Image } from '../Helper/Image'
 
 export const SearchTypes = () => {
     const Types = [
@@ -28,10 +29,10 @@ export const SearchTypes = () => {
 
     const [typeSelected, setTypeSelected] = React.useState('')
     const [typeListPokemons, setTypeListPokemons] = React.useState([])
-    const [load, setLoad] = React.useState(false)
+    const [isLoading, setIsLoading] = React.useState(false)
 
     const typesFetch = async () => {
-        setLoad(true)
+        setIsLoading(true)
         try {
             const URLs = await fetch(`https://pokeapi.co/api/v2/type/${typeSelected}`)
                 .then(res => res.json())
@@ -42,16 +43,16 @@ export const SearchTypes = () => {
             setTypeListPokemons(result.map(info => ({
                 id: info.id,
                 name: info.name,
+                weight: info.weight,
+                height: info.height,
                 types: info.types.map(({ type }) => type.name),
                 image: info.sprites.other.home.front_default,
-                stats: info.stats.map(stat => ({ stat: stat.base_stat, name: stat.stat.name })),
-                weight: info.weight,
-                height: info.height
+                stats: info.stats.map(stat => ({ stat: stat.base_stat, name: stat.stat.name }))
             })))
         } catch (err) {
             console.log(err)
         } finally {
-            setLoad(false)
+            setIsLoading(false)
         }
     }
 
@@ -77,7 +78,7 @@ export const SearchTypes = () => {
                 </ul>
             </nav>
 
-            {load ? (
+            {isLoading ? (
                 <div className='search-card'>
                     <Loading />
                 </div>
@@ -88,7 +89,7 @@ export const SearchTypes = () => {
                             <div key={pokemon.id} className={`card card${pokemon.types[0]}`}>
 
                                 <div className='pokemon-info'>
-                                    <img src={pokemon.image} alt={pokemon.name} />
+                                    <Image src={pokemon.image} alt={pokemon.name} />
                                     <span>#0{pokemon.id}</span>
                                     <h2>{pokemon.name}</h2>
 

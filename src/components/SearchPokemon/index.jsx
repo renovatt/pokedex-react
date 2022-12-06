@@ -1,12 +1,16 @@
 import React from 'react'
 import './index.css'
-import { Loading } from '../Loading'
-import { Error } from '../Error'
+import { Loading } from '../Helper/Loading'
+import { Error } from '../Helper/Error'
+import { Pokedex } from '../Pokedex'
+import { SearchTypes } from '../SearchTypes'
 
 export const SearchPokemon = () => {
     const [pokemon, setPokemon] = React.useState('')
     const [pokemonFetch, setPokemonFetch] = React.useState('')
     const [isLoading, setIsLoading] = React.useState(false)
+    const [searchForType, setSearchForType] = React.useState(true)
+    // const [pokedexMain, setPokedexMain] = React.useState(true)
     const [error, setError] = React.useState(false)
     const { id, name, types, sprites } = pokemonFetch
 
@@ -23,15 +27,25 @@ export const SearchPokemon = () => {
             fetchPokemon('')
         } finally {
             setIsLoading(false)
+            setSearchForType(true)
         }
     }
+
+    React.useEffect(() => {
+        setTimeout(() => {
+            setError(false)
+        }, 5000);
+    }, [error])
 
     function handleSubmit(e) {
         e.preventDefault()
         fetchPokemon(pokemon.toLocaleLowerCase())
         setPokemon('')
         setError(false)
+        setSearchForType(false)
+        // setPokedexMain(false)
     }
+
     return (
         <div className='search-container'>
             <section className='search-header'>
@@ -45,6 +59,9 @@ export const SearchPokemon = () => {
                     <button>Buscar</button>
                 </form>
             </section>
+
+            {searchForType && <SearchTypes /> }
+            {/* {pokedexMain && <Pokedex/>} */}
 
             {isLoading ? (
                 <div className='search-card'>
@@ -74,9 +91,6 @@ export const SearchPokemon = () => {
                 </div>
             ) : (
                 <div></div>
-                // <div className='search-first'>
-                //     <h2>Procure pelo seu Pokemon favorito!</h2>
-                // </div>
             )}
             {error && <Error />}
         </div>

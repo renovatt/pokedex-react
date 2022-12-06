@@ -25,6 +25,8 @@
     font-size: 1rem;
     padding: .2rem 1.5rem;
     border-radius: .4rem;
+    text-align: center;
+    font-weight: bold;
     text-transform: capitalize;
     width: auto;
 }

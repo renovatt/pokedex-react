@@ -10,11 +10,6 @@ export const PokemonModal = ({ id }) => {
     const [pokemon, setPokemon] = React.useState('')
     const { name, types, sprites, height, weight, stats } = pokemon
 
-    // React.useEffect(() => {
-    //     const findPokemon = pokemons.find(pokemon => pokemon.id === +id)
-    //     setPokemon(findPokemon)
-    // }, [id, pokemon])
-
     React.useEffect(() => {
         const modalFetch = async () => {
             const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)

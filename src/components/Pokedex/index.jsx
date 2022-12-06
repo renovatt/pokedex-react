@@ -4,7 +4,8 @@ import { FaArrowUp } from 'react-icons/fa'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
 import { PokemonModal } from '../Modal'
-import { Loading } from '../Loading'
+import { Loading } from '../Helper/Loading'
+import { Image } from '../Helper/Image'
 
 export const Pokedex = () => {
 
@@ -54,7 +55,7 @@ export const Pokedex = () => {
                     <div key={pokemon.id} className={`card card${pokemon.types[0]}`}>
 
                         <div className='pokemon-info'>
-                            <img src={pokemon.image} alt={pokemon.name} />
+                            <Image src={pokemon.image} alt={pokemon.name}/>
                             <span>#0{pokemon.id}</span>
                             <h2>{pokemon.name}</h2>
 
@@ -78,7 +79,8 @@ export const Pokedex = () => {
                         {pokemon.types && (
                             <button
                                 className={`${pokemon.types[0]} btn`}
-                                id={pokemon.id}>
+                                id={pokemon.id}
+                                onClick={(e) => setPokemonID(e.target.id)}>
                                 Mais Detalhes
                             </button>
                         )}
@@ -94,7 +96,7 @@ export const Pokedex = () => {
                         onClick={() => setLimit(limit + 21)}>
                         Carregar mais
                     </button>
-                    <button className='to-top' onClick={()=> window.scrollTo(0,0)}>
+                    <button className='to-top' onClick={() => window.scrollTo(0, 0)}>
                         <FaArrowUp />
                     </button>
                 </div>
