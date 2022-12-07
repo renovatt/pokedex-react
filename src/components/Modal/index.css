@@ -35,9 +35,10 @@
 }
 
 @media (max-width: 71.25rem) {
-    .modal-container{
+    .modal-container {
         overflow-y: auto;
     }
+
     .modal-card {
         margin-top: 25rem;
         justify-content: center;
@@ -96,8 +97,12 @@
     flex-wrap: wrap;
 }
 
-@media (max-width: 25.94rem){
-    .modal-body{
+@media (max-width: 35.94rem) {
+    .modal-card {
+        width: 120%;
+    }
+
+    .modal-body {
         flex-direction: column;
     }
 }
