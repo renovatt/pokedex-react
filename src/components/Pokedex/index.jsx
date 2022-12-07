@@ -37,7 +37,8 @@ export const Pokedex = () => {
                 id: info.id,
                 name: info.name,
                 types: info.types.map(({ type }) => type.name),
-                image: info.sprites.other.home.front_default,
+                // image: info.sprites.other.home.front_default,
+                image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${info.id}.png`,
                 stats: info.stats.map(stat => ({ stat: stat.base_stat, name: stat.stat.name })),
                 weight: info.weight,
                 height: info.height

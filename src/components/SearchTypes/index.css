@@ -18,6 +18,18 @@
     align-items: center;
 }
 
+@media (max-width: 65.25rem) {
+    .search-type-nav ul {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 40.94rem) {
+    .search-type-nav ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .search-type-nav ul li {
     list-style: none;
     color: #fff;

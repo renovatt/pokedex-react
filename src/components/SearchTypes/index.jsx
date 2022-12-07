@@ -1,9 +1,9 @@
 import React from 'react'
 import './index.css'
-import { Loading } from '../Loading'
+import { Image } from '../Helper/Image'
+import { Loading } from '../Helper/Loading'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
-import { Image } from '../Helper/Image'
 
 export const SearchTypes = () => {
     const Types = [
@@ -46,7 +46,8 @@ export const SearchTypes = () => {
                 weight: info.weight,
                 height: info.height,
                 types: info.types.map(({ type }) => type.name),
-                image: info.sprites.other.home.front_default,
+                // image: info.sprites.other.home.front_default,
+                image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${info.id}.png`,
                 stats: info.stats.map(stat => ({ stat: stat.base_stat, name: stat.stat.name }))
             })))
         } catch (err) {

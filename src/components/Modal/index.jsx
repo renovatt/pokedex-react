@@ -4,11 +4,13 @@ import { ProgressBar } from './style'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
 import { ReactComponent as Pokeball } from '../../assets/divider-pokeball.svg'
+import { Image } from '../Helper/Image'
 
 export const PokemonModal = ({ id }) => {
 
     const [pokemon, setPokemon] = React.useState('')
     const { name, types, sprites, height, weight, stats } = pokemon
+    const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`
 
     React.useEffect(() => {
         const modalFetch = async () => {
@@ -24,7 +26,7 @@ export const PokemonModal = ({ id }) => {
             {pokemon && (
                 <div className='modal-card'>
                     <div className='modal-pokemon-info'>
-                        <img src={sprites.other.home.front_default} alt={name} />
+                        <Image src={image} alt={name}/>
                         <span>#0{id}</span>
                         <h2>{name}</h2>
 

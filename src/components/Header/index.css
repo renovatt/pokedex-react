@@ -20,3 +20,10 @@
     letter-spacing: .1rem;
     text-shadow: 3px 3px 0px #fff, 5px 10px 0px #000;
 }
+
+@media (max-width: 25.94rem){
+    .header{
+        flex-direction: column;
+        margin-bottom: 7rem;
+    }
+}
