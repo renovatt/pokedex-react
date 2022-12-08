@@ -1,72 +1,65 @@
-Deploy: https://pokedex-snowy-seven.vercel.app/
+<div align='center'>
+<div>
+    <img src="https://img.shields.io/github/repo-size/renovatt/dogs">
+    <img src="https://img.shields.io/github/languages/count/renovatt/dogs">
+    <img src="https://img.shields.io/github/languages/top/renovatt/dogs">
+    <img src="https://img.shields.io/github/last-commit/renovatt/dogs">
+</div>
+</div>
 
-# Getting Started with Create React App
+#
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align='center'>
+<h1>Pokedex-React <br> <br>
+<img src="logo512.png" width="30px"></h1>
+</div>
 
-## Available Scripts
+## Descrição
 
-In the project directory, you can run:
+https://pokedex-snowy-seven.vercel.app/
 
-### `npm start`
+#### Criação da famosa Pokédex, colocando em prática meus conhecimentos iniciais com React, antes tinha criado esse projeto usando JavaScript puro e agora resolvi adaptar ao React.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Layout mobile
+![Mobile 1](./public/mobile-1.png)
 
-### `npm test`
+## Layout web
+![Web 1](./public/web-1.png) ![Web 2](./public/web-2.png) ![Web 3](./public/web-3.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+# Tecnologias
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<ul>
+    <li style="list-style: none;">
+    <a href="https://create-react-app.dev/" target="_blank">React</a></li>
+    <li style="list-style: none;">
+    <a href="https://reactrouter.com/" target="_blank">React Router</a></li>
+</ul>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# ℹ️ Como usar
 
-### `npm run eject`
+    Clone esse repositório
+    $ git clone https://github.com/renovatt/pokedex-react.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    Instalar dependências
+    $ npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Inicie o projeto
+    $ npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Como contribuir?
 
-## Learn More
+#### Você pode dar suporte me seguindo aqui no GitHub, dando uma estrela no projeto ou criar uma conexão comigo no linkedin, fazendo parte da minha Networking e curtir o meu projeto.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Autor
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Criado por <a href="https://www.linkedin.com/in/renovatt/" target="_blank">*Wildemberg Renovato de Lima*</a>
