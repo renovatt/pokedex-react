@@ -1,12 +1,3 @@
-<div align='center'>
-<div>
-    <img src="https://img.shields.io/github/repo-size/renovatt/dogs">
-    <img src="https://img.shields.io/github/languages/count/renovatt/dogs">
-    <img src="https://img.shields.io/github/languages/top/renovatt/dogs">
-    <img src="https://img.shields.io/github/last-commit/renovatt/dogs">
-</div>
-</div>
-
 #
 
 <div align='center'>
