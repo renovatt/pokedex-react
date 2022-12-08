@@ -11,7 +11,7 @@
 
 <div align='center'>
 <h1>Pokedex-React <br> <br>
-<img src="logo512.png" width="30px"></h1>
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/25.png" width="50px"></h1>
 </div>
 
 ## Descrição
