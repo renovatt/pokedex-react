@@ -1,3 +1,47 @@
+import { createGlobalStyle } from "styled-components";
+import Pokemon from './assets/fonts/PokemonSolid.ttf'
+
+export const GlobalStyled = createGlobalStyle`
+
+@font-face{
+  font-family: 'Pokemon';
+  src: url(${Pokemon}) format('opentype');
+  font-weight: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oxanium', cursive;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+  background: radial-gradient(circle, #3c1053 0%, #362669 55%);
+}
+
+/* Types */
+
 .bug {
     background: #7bcf00;
     background-image: url(../../assets/iconTypes/bug.svg);
@@ -213,3 +257,4 @@
     background: #14a8ff;
     background: radial-gradient(circle, #14a8ff -90%, #1b1b1b 55%);
 }
+`

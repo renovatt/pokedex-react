@@ -51,7 +51,9 @@ export const SearchTypes = () => {
                 stats: info.stats.map(stat => ({ stat: stat.base_stat, name: stat.stat.name }))
             })))
         } catch (err) {
-            console.log(err + "Algumas imagens não podem ser carregadas!")
+            if (err === 404) {
+                console.log(err + "Algumas imagens não podem ser carregadas!")
+            }
         } finally {
             setIsLoading(false)
         }

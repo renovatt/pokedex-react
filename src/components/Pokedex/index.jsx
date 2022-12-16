@@ -1,5 +1,4 @@
 import React from 'react'
-import './index.css'
 import * as S from './style'
 import { FaArrowUp } from 'react-icons/fa'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'

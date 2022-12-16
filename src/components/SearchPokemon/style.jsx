@@ -10,7 +10,6 @@ export const SearchHeader = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 2rem;
     height: 5rem;
     width: 100%;
     border-radius: .4rem;
