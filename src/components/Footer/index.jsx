@@ -1,28 +1,31 @@
 import React from 'react'
-import './index.css'
+import * as S from './style'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 export const Footer = () => {
   return (
-    <footer className='footer'>
-      <div>
-        <p>&copy; willcode | Criado por <a href="https://www.linkedin.com/in/renovatt/">renovatt</a></p>
-        <p>Direitos de imagens reservados para Nitendo & The Pokémon Company</p>
-      </div>
-      <div className='social-icons'>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/renovatt/" target="_blank">
-              <FaLinkedin />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/renovatt" target="_blank">
-              <FaGithub />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    <S.FooterContainer>
+      <S.FooterContent>
+        <S.TextContent>
+          &copy; willcode | Criado por <S.LinkContent href="https://www.linkedin.com/in/renovatt/">renovatt</S.LinkContent>
+        </S.TextContent>
+        <S.TextContent>
+          Direitos de imagens reservados para Nitendo & The Pokémon Company
+        </S.TextContent>
+      </S.FooterContent>
+
+      <S.SocialIcons>
+        <S.ListIcons>
+          <S.ItensIcons>
+            <S.LinkIcons
+              href="https://www.linkedin.com/in/renovatt/"
+              target="_blank"><FaLinkedin /></S.LinkIcons>
+            <S.LinkIcons
+              href="https://github.com/renovatt"
+              target="_blank"><FaGithub /></S.LinkIcons>
+          </S.ItensIcons>
+        </S.ListIcons>
+      </S.SocialIcons>
+    </S.FooterContainer>
   )
 }
