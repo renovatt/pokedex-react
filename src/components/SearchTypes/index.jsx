@@ -1,7 +1,7 @@
 import React from 'react'
-import './index.css'
 import { Image } from '../Helper/Image'
 import { Loading } from '../Helper/Loading'
+import * as S from './style'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
 
@@ -51,7 +51,7 @@ export const SearchTypes = () => {
                 stats: info.stats.map(stat => ({ stat: stat.base_stat, name: stat.stat.name }))
             })))
         } catch (err) {
-            console.log(err)
+            console.log(err + "Algumas imagens não podem ser carregadas!")
         } finally {
             setIsLoading(false)
         }
@@ -66,62 +66,64 @@ export const SearchTypes = () => {
     }
 
     return (
-        <div className='search-type-container'>
-            <nav className='search-type-nav'>
-                <ul>
+        <S.SearchTypeContainer>
+            <S.SearchTypeNavigation>
+                <S.NavigationList>
                     {Types.map(type => (
-                        <li
+                        <S.NavigationItems
                             name={type.name}
                             key={type.name}
                             className={type.name}
-                            onClick={handleClick}>{type.name}</li>
+                            onClick={handleClick}>{type.name}</S.NavigationItems>
                     ))}
-                </ul>
-            </nav>
+                </S.NavigationList>
+            </S.SearchTypeNavigation>
 
             {isLoading ? (
-                <div className='search-card'>
+                <S.PokemonContainer>
                     <Loading />
-                </div>
+                </S.PokemonContainer>
             ) :
                 typeSelected && (
-                    <section className='content'>
+                    <S.PokemonContainer>
                         {typeListPokemons && typeListPokemons.map(pokemon => (
-                            <div key={pokemon.id} className={`card card${pokemon.types[0]}`}>
+                            <S.PokemonCard
+                                key={pokemon.id}
+                                className={`card${pokemon.types[0]}`}>
 
-                                <div className='pokemon-info'>
+                                <S.PokemonInfo>
                                     <Image src={pokemon.image} alt={pokemon.name} />
-                                    <span>#0{pokemon.id}</span>
-                                    <h2>{pokemon.name}</h2>
+                                    <S.PokemonID>#0{pokemon.id}</S.PokemonID>
+                                    <S.PokemonName>{pokemon.name}</S.PokemonName>
 
-                                    <div className="types">
+                                    <S.PokemonTypes>
                                         {pokemon.types.map((name, index) =>
-                                            (<span className={name} key={index}>{name}</span>))}
-                                    </div>
+                                            (<S.TypesItems className={name} key={index}>{name}</S.TypesItems>))}
+                                    </S.PokemonTypes>
 
-                                    <div className='body'>
-                                        <div>
-                                            <span><RulerIcon /></span>
-                                            Altura: {pokemon.height / 10} m
-                                        </div>
-                                        <div>
-                                            <span><WeightIcon /></span>
-                                            Peso: {pokemon.weight / 10} kg
-                                        </div>
-                                    </div>
-                                </div>
+                                    <S.PokemonBodyDetails>
+                                        <S.Details>
+                                            <S.SvgDetails><RulerIcon /></S.SvgDetails>
+                                            <S.TextDetails>Altura: {pokemon.height / 10} m</S.TextDetails>
+                                        </S.Details>
+                                        <S.Details>
+                                            <S.SvgDetails><WeightIcon /></S.SvgDetails>
+                                            <S.TextDetails>Peso: {pokemon.weight / 10} kg</S.TextDetails>
+                                        </S.Details>
+                                    </S.PokemonBodyDetails>
+                                </S.PokemonInfo>
 
                                 {pokemon.types && (
-                                    <button
-                                        className={`${pokemon.types[0]} btn`}
-                                        id={pokemon.id}>
+                                    <S.MoreDetailsButton
+                                        id={pokemon.id}
+                                        className={`${pokemon.types[0]}`}>
                                         Mais Detalhes
-                                    </button>
+                                    </S.MoreDetailsButton>
                                 )}
-                            </div>
+                            </S.PokemonCard>
                         ))}
-                    </section>
+                    </S.PokemonContainer>
                 )}
-        </div>
+        </S.SearchTypeContainer>
     )
 }

@@ -1,10 +1,10 @@
 import React from 'react'
-import './index.css'
+import * as S from './style'
 
 export const Loading = () => {
     return (
-        <div className="pokeball">
-            <div className="pokeball__button"></div>
-        </div>
+        <S.Pokeball>
+            <S.Pokeball_button></S.Pokeball_button>
+        </S.Pokeball>
     )
 }

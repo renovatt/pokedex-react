@@ -26,13 +26,6 @@ export const HeaderContainer = styled.header`
 `
 
 export const Title = styled.h1`
-
-    @font-face {
-        font-family: 'Pokemon';
-        src: url('../../assets/fonts/Pokemon\ Solid.ttf') format('opentype');
-        font-weight: normal;
-    }
-
     font-family: 'Pokemon';
     font-size: 3rem;
     color: #fb1;

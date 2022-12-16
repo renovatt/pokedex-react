@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.css'
+import * as S from './style'
 import { FaArrowUp } from 'react-icons/fa'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
@@ -51,56 +52,57 @@ export const Pokedex = () => {
     return (
         <>
             {pokemonID && <PokemonModal id={pokemonID} />}
-            <section className='content'>
+            
+            <S.PokemonContainer>
                 {pokeList && pokeList.map(pokemon => (
-                    <div key={pokemon.id} className={`card card${pokemon.types[0]}`}>
+                    <S.PokemonCard
+                        key={pokemon.id}
+                        className={`card${pokemon.types[0]}`}>
 
-                        <div className='pokemon-info'>
-                            <Image src={pokemon.image} alt={pokemon.name}/>
-                            <span>#0{pokemon.id}</span>
-                            <h2>{pokemon.name}</h2>
+                        <S.PokemonInfo>
+                            <Image src={pokemon.image} alt={pokemon.name} />
+                            <S.PokemonID>#0{pokemon.id}</S.PokemonID>
+                            <S.PokemonName>{pokemon.name}</S.PokemonName>
 
-                            <div className="types">
+                            <S.PokemonTypes>
                                 {pokemon.types.map((name, index) =>
-                                    (<span className={name} key={index}>{name}</span>))}
-                            </div>
+                                    (<S.TypesItems className={name} key={index}>{name}</S.TypesItems>))}
+                            </S.PokemonTypes>
 
-                            <div className='body'>
-                                <div>
-                                    <span><RulerIcon /></span>
-                                    Altura: {pokemon.height / 10} m
-                                </div>
-                                <div>
-                                    <span><WeightIcon /></span>
-                                    Peso: {pokemon.weight / 10} kg
-                                </div>
-                            </div>
-                        </div>
+                            <S.PokemonBodyDetails>
+                                <S.Details>
+                                    <S.SvgDetails><RulerIcon /></S.SvgDetails>
+                                    <S.TextDetails>Altura: {pokemon.height / 10} m</S.TextDetails>
+                                </S.Details>
+                                <S.Details>
+                                    <S.SvgDetails><WeightIcon /></S.SvgDetails>
+                                    <S.TextDetails>Peso: {pokemon.weight / 10} kg</S.TextDetails>
+                                </S.Details>
+                            </S.PokemonBodyDetails>
+                        </S.PokemonInfo>
 
                         {pokemon.types && (
-                            <button
-                                className={`${pokemon.types[0]} btn`}
+                            <S.MoreDetailsButton
                                 id={pokemon.id}
+                                className={`${pokemon.types[0]}`}
                                 onClick={(e) => setPokemonID(e.target.id)}>
                                 Mais Detalhes
-                            </button>
+                            </S.MoreDetailsButton>
                         )}
-                    </div>
+                    </S.PokemonCard>
                 ))}
-            </section>
+            </S.PokemonContainer>
             {load ? (
                 <Loading />
             ) : (
-                <div className='end-buttons'>
-                    <button
-                        className='load-button'
-                        onClick={() => setLimit(limit + 21)}>
+                <S.EndButtonsContainer>
+                    <S.LoadButton onClick={() => setLimit(limit + 21)}>
                         Carregar mais
-                    </button>
-                    <button className='to-top' onClick={() => window.scrollTo(0, 0)}>
+                    </S.LoadButton>
+                    <S.ToTopButton onClick={() => window.scrollTo(0, 0)}>
                         <FaArrowUp />
-                    </button>
-                </div>
+                    </S.ToTopButton>
+                </S.EndButtonsContainer>
             )}
         </>
     )

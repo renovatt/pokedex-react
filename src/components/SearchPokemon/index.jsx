@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.css'
+import * as S from './style'
 import { Loading } from '../Helper/Loading'
 import { Error } from '../Helper/Error'
 
@@ -18,7 +18,7 @@ export const SearchPokemon = () => {
             if (json) {
                 setPokemonFetch(json)
             }
-        } catch (err) {
+        } catch {
             setError(true)
             fetchPokemon('')
         } finally {
@@ -40,49 +40,47 @@ export const SearchPokemon = () => {
     }
 
     return (
-        <div className='search-container'>
-            <section className='search-header'>
-                <form onSubmit={handleSubmit}>
-                    <input
+        <S.SearchContainer>
+            <S.SearchHeader>
+                <S.SearchForm onSubmit={handleSubmit}>
+                    <S.SearchInput
                         placeholder='Procure o seu pokemon'
                         type="text"
                         required
                         value={pokemon}
                         onChange={({ target }) => setPokemon(target.value)} />
-                    <button>Buscar</button>
-                </form>
-            </section>
+                    <S.SearchButton>Buscar</S.SearchButton>
+                </S.SearchForm>
+            </S.SearchHeader>
 
             {isLoading ? (
-                <div className='search-card'>
+                <S.SearchCardContainer>
                     <Loading />
-                </div>
+                </S.SearchCardContainer>
             ) : name ? (
-                <div className={`search-card animation card${types[0].type.name}`}>
-                    <div className='search-info'>
-                        <span>#0{id}</span>
-                        <h1>{name}</h1>
+                <S.SearchCardContainer className={`card${types[0].type.name}`}>
+                    <S.PokemonInfo>
+                        <S.PokemonID>#0{id}</S.PokemonID>
+                        <S.PokemonName>{name}</S.PokemonName>
                         {types.map(({ type }) => (
-                            <span key={type.name} className={type.name}>
+                            <S.PokemonTypes key={type.name} className={type.name}>
                                 {type.name}
-                            </span>
+                            </S.PokemonTypes>
                         ))}
 
-                        <button
-                            className={`search-btn ${types[0].type.name}`}
-                            id={id}>
+                        <S.MoreDetails id={id} className={`${types[0].type.name}`}>
                             Mais Detalhes
-                        </button>
-                    </div>
+                        </S.MoreDetails>
+                    </S.PokemonInfo>
 
-                    <div className='search-image'>
-                        <img src={sprites.other.home.front_default} alt={name} />
-                    </div>
-                </div>
+                    <S.ContainerImage>
+                        <S.PokemonImage src={sprites.other.home.front_default} alt={name} />
+                    </S.ContainerImage>
+                </S.SearchCardContainer>
             ) : (
-                <div></div>
+                <S.NullContent></S.NullContent>
             )}
             {error && <Error />}
-        </div>
+        </S.SearchContainer>
     )
 }

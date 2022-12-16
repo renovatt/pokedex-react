@@ -16,14 +16,14 @@ export const Footer = () => {
 
       <S.SocialIcons>
         <S.ListIcons>
-          <S.ItensIcons>
+          <S.ItemsIcons>
             <S.LinkIcons
               href="https://www.linkedin.com/in/renovatt/"
               target="_blank"><FaLinkedin /></S.LinkIcons>
             <S.LinkIcons
               href="https://github.com/renovatt"
               target="_blank"><FaGithub /></S.LinkIcons>
-          </S.ItensIcons>
+          </S.ItemsIcons>
         </S.ListIcons>
       </S.SocialIcons>
     </S.FooterContainer>

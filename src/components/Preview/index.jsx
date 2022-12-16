@@ -1,8 +1,7 @@
 import React from 'react'
 import load from '../../assets/load-pokeball.gif'
 import ash from '../../assets/ash-2.png'
-import './index.css'
-import { Image } from '../Helper/Image'
+import * as S from './style'
 
 export const Preview = () => {
     const [pokemonPreview, setPokemonPreview] = React.useState('')
@@ -36,41 +35,40 @@ export const Preview = () => {
     }, [])
 
     return (
-        <div className='preview'>
-            <div className='preview-logo animation'>
-                <img src={ash} alt="Ash" />
-            </div>
+        <S.PreviewContainer>
+            <S.LogoContainer>
+                <S.LogoImage src={ash} alt="Ash" />
+            </S.LogoContainer>
 
             {isLoading ? (
-                <div className='preview-card'>
-                    <div className='load'>
-                        <img src={load} alt="load" />
-                    </div>
-                </div>
+                <S.PreviewCard>
+                    <S.LoadContainer>
+                        <S.LoadImage src={load} alt="load" />
+                    </S.LoadContainer>
+                </S.PreviewCard>
             ) : name ? (
-                <div className={`preview-card animation card${types[0].type.name}`}>
-                    <div className='preview-info'>
-                        <span>#{id}</span>
-                        <h1>{name}</h1>
+                <S.PreviewCard className={`card${types[0].type.name}`}>
+                    <S.PreviewInfo>
+                        <S.PokemonID>#{id}</S.PokemonID>
+                        <S.PokemonName>{name}</S.PokemonName>
                         {types.map(({ type }) => (
-                            <span key={type.name} className={type.name}>
+                            <S.PokemonTypes key={type.name} className={type.name}>
                                 {type.name}
-                            </span>
+                            </S.PokemonTypes>
                         ))}
-                    </div>
+                    </S.PreviewInfo>
 
-                    <div className='preview-image'>
-                        <img src={sprites.other.home.front_default} alt={name} />
-                        {/* <Image src={sprites.other.home.front_default} alt={name} /> */}
-                    </div>
-                </div>
+                    <S.PreviewPokemon>
+                        <S.PreviewPokemonImage src={sprites.other.home.front_default} alt={name} />
+                    </S.PreviewPokemon>
+                </S.PreviewCard>
             ) : (
-                <div className='preview-card'>
-                    <div className='load'>
-                        <img src={load} alt="load" />
-                    </div>
-                </div>
+                <S.PreviewCard>
+                    <S.LoadContainer>
+                        <S.LoadImage src={load} alt="load" />
+                    </S.LoadContainer>
+                </S.PreviewCard>
             )}
-        </div>
+        </S.PreviewContainer>
     )
 }

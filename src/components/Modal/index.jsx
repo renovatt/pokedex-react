@@ -1,6 +1,5 @@
 import React from 'react'
-import './index.css'
-import { ProgressBar } from './style'
+import * as S from './style'
 import { ReactComponent as WeightIcon } from '../../assets/icon-weight.svg'
 import { ReactComponent as RulerIcon } from '../../assets/icon-ruler.svg'
 import { ReactComponent as Pokeball } from '../../assets/divider-pokeball.svg'
@@ -22,45 +21,45 @@ export const PokemonModal = ({ id }) => {
     }, [id])
 
     return (
-        <div className='modal-container'>
+        <S.ModalContainer>
             {pokemon && (
-                <div className='modal-card'>
-                    <div className='modal-pokemon-info'>
-                        <Image src={image} alt={name}/>
-                        <span>#0{id}</span>
-                        <h2>{name}</h2>
+                <S.ModalCard>
+                    <S.ModalInfo>
+                        <Image src={image} alt={name} />
+                        <S.PokemonID>#0{id}</S.PokemonID>
+                        <S.PokemonName>{name}</S.PokemonName>
 
-                        <div className="modal-types">
+                        <S.ModalTypes>
                             {types.map(({ type }) => (
-                                <span key={type.name} className={type.name}>{type.name}</span>
+                                <S.Types key={type.name} className={type.name}>{type.name}</S.Types>
                             ))}
-                        </div>
+                        </S.ModalTypes>
 
-                        <div className='modal-body'>
-                            <div><span><RulerIcon /></span>Altura: {height / 10} m</div>
-                            <div><span><WeightIcon /></span>Peso: {weight / 10} kg</div>
-                        </div>
-                    </div>
+                        <S.ModalBody>
+                            <S.Details><S.SvgDetails><RulerIcon /></S.SvgDetails>Altura: {height / 10} m</S.Details>
+                            <S.Details><S.SvgDetails><WeightIcon /></S.SvgDetails>Peso: {weight / 10} kg</S.Details>
+                        </S.ModalBody>
+                    </S.ModalInfo>
 
                     <Pokeball className='pokeball-icon' />
 
-                    <div className="modal-pokemon-stat">
-                        <div className='modal-stats'>
+                    <S.StatsContainer>
+                        <S.Stats>
                             {stats.map(({ stat, base_stat }) => {
                                 return (
-                                    <div className='modal-stat' key={stat.name}>
-                                        <span className='modal-stat-name'>{stat.name}</span>
-                                        <span className='modal-stat-value'>{base_stat}</span>
-                                        <div className='modal-bar'>
-                                            <ProgressBar base_stat={base_stat}></ProgressBar>
-                                        </div>
-                                    </div>
+                                    <S.StatContent key={stat.name}>
+                                        <S.StatName>{stat.name}</S.StatName>
+                                        <S.StatValue>{base_stat}</S.StatValue>
+                                        <S.StatBar>
+                                            <S.ProgressBar base_stat={base_stat}></S.ProgressBar>
+                                        </S.StatBar>
+                                    </S.StatContent>
                                 )
                             })}
-                        </div>
-                    </div>
-                </div>
+                        </S.Stats>
+                    </S.StatsContainer>
+                </S.ModalCard>
             )}
-        </div>
+        </S.ModalContainer>
     )
 }

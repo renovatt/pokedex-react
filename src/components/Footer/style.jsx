@@ -61,7 +61,7 @@ export const ListIcons = styled.ul`
     list-style: none;
 `
 
-export const ItensIcons = styled.li`
+export const ItemsIcons = styled.li`
     margin: 0 1rem;
 `
 
