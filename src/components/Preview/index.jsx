@@ -42,12 +42,12 @@ export const Preview = () => {
 
             {isLoading ? (
                 <S.PreviewCard>
-                    <S.LoadContainer>
+                    <S.LoadContainer className='animate'>
                         <S.LoadImage src={load} alt="load" />
                     </S.LoadContainer>
                 </S.PreviewCard>
             ) : name ? (
-                <S.PreviewCard className={`card${types[0].type.name}`}>
+                <S.PreviewCard className={`animate card${types[0].type.name}`}>
                     <S.PreviewInfo>
                         <S.PokemonID>#{id}</S.PokemonID>
                         <S.PokemonName>{name}</S.PokemonName>

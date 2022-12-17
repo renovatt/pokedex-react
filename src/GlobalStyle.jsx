@@ -40,6 +40,19 @@ html{
   background: radial-gradient(circle, #3c1053 0%, #362669 55%);
 }
 
+.animate{
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: animate .3s forwards;
+
+    @keyframes animate{
+        to{
+            opacity: 1;
+            transform: initial;
+        }
+    }
+}
+
 /* Types */
 
 .bug {
