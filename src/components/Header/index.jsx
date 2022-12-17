@@ -3,7 +3,6 @@ import * as S from './style'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 export const Header = () => {
-
     return (
         <S.HeaderContainer>
             <S.Title>Pokédex</S.Title>

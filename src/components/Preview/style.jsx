@@ -10,6 +10,16 @@ export const PreviewContainer = styled.section`
     margin-top: 2rem;
     margin-bottom: 4rem;
     border-radius: .4rem;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: animate .3s forwards;
+
+    @keyframes animate{
+        to{
+            opacity: 1;
+            transform: initial;
+        }
+    }
 `
 export const LogoContainer = styled.div`
     overflow: hidden;
@@ -20,20 +30,15 @@ export const LogoContainer = styled.div`
     width: 30%;
     border-radius: .4rem;
     background: #000;
-
     opacity: 0;
     transform: translateX(-20px);
-    animation: animation .3s forwards;
+    animation: animate .3s forwards;
 
-    @keyframes animation{
+    @keyframes animate{
         to{
             opacity: 1;
             transform: initial;
         }
-    }
-
-    @media (max-width: 65.25rem) { 
-        display: none;
     }
 `
 export const LogoImage = styled.img`
@@ -48,6 +53,16 @@ export const PreviewCard = styled.div`
     width: 68%;
     height: 29rem;
     border-radius: .4rem;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: animate .3s forwards;
+
+    @keyframes animate{
+        to{
+            opacity: 1;
+            transform: initial;
+        }
+    }
 
     @media (max-width: 65.25rem) {
         width: 100%; 
@@ -66,6 +81,16 @@ export const LoadContainer = styled.div`
     height: 29rem;
     width: 100%;
     background: #181b1d;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: animate .3s forwards;
+
+    @keyframes animate{
+        to{
+            opacity: 1;
+            transform: initial;
+        }
+    }
 `
 export const LoadImage = styled.img`
     height: 100%;

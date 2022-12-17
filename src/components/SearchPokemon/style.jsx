@@ -64,6 +64,16 @@ export const SearchCardContainer = styled.div`
             transform: initial;
         }
     }
+
+    @media (max-width: 65.25rem) {
+        width: 100%; 
+    }
+
+    @media (max-width: 25.94rem) {
+        height: 35rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 `
 
 export const PokemonInfo= styled.div`
@@ -98,7 +108,7 @@ export const PokemonID = styled.span`
     }
 
     @media (max-width: 25.94rem){
-        font-size: 8em;
+        font-size: 3rem;
     }
 `
 
@@ -126,12 +136,10 @@ export const PokemonTypes = styled.span`
     text-shadow: 1px 1px 5px #000;
 
     @media (max-width: 45.94rem){
-        margin: 0 auto;
+        margin: .3rem auto;
     }
 
-    @media (max-width: 25.94rem){
-        margin-top: 1rem;
-    }
+   
 `
 
 export const MoreDetails = styled.button`
@@ -148,6 +156,13 @@ export const MoreDetails = styled.button`
     background-image: none;
     border-radius: 2rem;
     text-shadow: 1px 1px 5px #000;
+
+    @media (max-width: 45.94rem){
+        margin: .2rem auto;
+        height: 2rem;
+        width: 200px;
+        font-size: 1.2rem;
+    }
 
     @media (max-width: 25.94rem){
         height: 2rem;

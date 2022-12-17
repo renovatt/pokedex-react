@@ -59,7 +59,8 @@ export const Preview = () => {
                     </S.PreviewInfo>
 
                     <S.PreviewPokemon>
-                        <S.PreviewPokemonImage src={sprites.other.home.front_default} alt={name} />
+                        <S.PreviewPokemonImage
+                            src={sprites.other.home.front_default} alt={name} />
                     </S.PreviewPokemon>
                 </S.PreviewCard>
             ) : (

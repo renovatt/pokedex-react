@@ -7,6 +7,7 @@ export const HeaderContainer = styled.header`
     width: 100%;
     height: 6rem;
     padding: 0 4rem;
+    margin-top: .8rem;
 
     opacity: 0;
     transform: translateX(-20px);
